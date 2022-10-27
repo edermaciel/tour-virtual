@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RestrictComponent } from './restrict.component';
 import { NavbarModule } from '../navbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from '../carousel';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     CommonModule,
     NavbarModule,
+    CarouselModule,
     NgbModule
   ]
 })

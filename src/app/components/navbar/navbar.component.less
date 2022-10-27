@@ -8,25 +8,28 @@ body {
 }
 
 .nav {
-    height          : 50px;
+    height          : 70px;
     width           : 100%;
     background-image: linear-gradient(to bottom, #00945d, #089856, #169c4d, #23a043, #30a337);
     position        : relative;
+    align-items     : center;
 }
 
 .nav>.nav-header {
     display: inline;
+    width  : 39%;
 }
 
 .nav>.nav-header>.nav-title {
-    cursor: default;
-    display  : inline-block;
-    font-size: 25px;
-    color    : #fff;
-    padding  : 10px 10px 10px 10px;
+    cursor     : default;
+    display    : inline-block;
+    font-size  : 35px;
+    color      : #fff;
+    padding    : 10px 10px 10px 10px;
     margin-left: 10px;
-    margin-top: 4px;
+    margin-top : -2px;
     font-family: 'Lobster', cursive;
+    width      : 100%;
 }
 
 .nav>.nav-btn {
@@ -34,12 +37,15 @@ body {
 }
 
 .nav>.nav-links {
-    display  : inline;
-    float    : right;
-    font-size: 18px;
-    margin-top: 5px;
+    text-align  : right;
+    width       : 60%;
+    display     : inline;
+    float       : right;
+    font-size   : 18px;
+    margin-top  : 5px;
     margin-right: 5px;
-    font-family: 'Bebas Neue', cursive;
+    font-family : 'Bebas Neue', cursive;
+    z-index: 999;
 }
 
 .nav>.nav-links>a {
@@ -47,8 +53,8 @@ body {
     padding        : 10px 10px 10px 10px;
     text-decoration: none;
     color          : #efefef;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius  : 5px;
+    cursor         : pointer;
 }
 
 .nav>.nav-links>a:hover {
@@ -77,7 +83,7 @@ body {
     .nav>.nav-btn>label:hover,
     .nav #nav-check:checked~.nav-btn>label {
         background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 7px;
+        border-radius   : 7px;
     }
 
     .nav>.nav-btn>label>span {
@@ -97,7 +103,7 @@ body {
         overflow-y      : hidden;
         top             : 50px;
         left            : 0px;
-        margin-top: 0px;
+        margin-top      : 0px;
     }
 
     .nav>.nav-links>a {
@@ -112,5 +118,17 @@ body {
     .nav>#nav-check:checked~.nav-links {
         height    : calc(100vh - 50px);
         overflow-y: auto;
+    }
+    
+    .nav>.nav-header>.nav-title {
+        cursor     : default;
+        display    : inline-block;
+        font-size  : 25px;
+        color      : #fff;
+        padding    : 10px 10px 10px 10px;
+        margin-left: 10px;
+        margin-top : -2px;
+        font-family: 'Lobster', cursive;
+        width      : 260px;
     }
 }
