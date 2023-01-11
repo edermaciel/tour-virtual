@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RestrictComponent } from './restrict.component';
 import { CarouselModule } from '../carousel';
-import { ContactModule } from '../contact';
+import { ContactLayoutModule } from '../contact-layout';
 import { FooterModule } from '../footer';
 import { HeaderModule } from '../header';
 import { TopicModule } from '../topic';
@@ -15,7 +15,7 @@ import { TopicModule } from '../topic';
   imports: [
     CommonModule,
     CarouselModule,
-    ContactModule,
+    ContactLayoutModule,
     FooterModule,
     HeaderModule,
     TopicModule

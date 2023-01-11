@@ -20,7 +20,6 @@
 <section class="carrossel">
     <h2 class="carrossel__titulo">Nossa História</h2>
     <div class="carrossel__container">
-
         <div class="card">
             <!-- 1ª linha -->
             <div class="card__descricao">
@@ -55,7 +54,7 @@
                     </li>
                 </ul>
                 <!-- 2ª coluna -->
-                <a href="#" class="botoes__ancora">Saiba mais</a>
+                <a [routerLink]="'sobre-nos'" class="botoes__ancora">Saiba mais</a>
             </div>
         </div>
     </div>
@@ -147,7 +146,7 @@
                     </li>
                 </ul>
                 <!-- 2ª coluna -->
-                <a href="#" class="botoes__ancora-lazer">Saiba mais</a>
+                <a [routerLink]="'sobre-nos'" class="botoes__ancora-lazer">Saiba mais</a>
             </div>
         </div>
     </div>
@@ -193,12 +192,12 @@
                         <div class="card__botoes">
                             <!-- 1ª coluna -->
                             <ul class="botoes">
-                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
-                                        alt="Agendar Diária">
+                                <li [routerLink]="'reserva'" class="botoes__item"><img [routerLink]="'reserva'"
+                                        src="../../../assets/images/compras.svg" alt="Agendar Diária">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->
-                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                            <a [routerLink]="'reserva'" class="botoes__ancora__feedback">Reserve Já</a>
                         </div>
                     </div>
                 </div>
@@ -233,12 +232,13 @@
                         <div class="card__botoes">
                             <!-- 1ª coluna -->
                             <ul class="botoes">
-                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
+                                <li [routerLink]="'reserva'" class="botoes__item"><img
+                                        src="../../../assets/images/compras.svg" [routerLink]="'reserva'"
                                         alt="Agendar Diária">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->
-                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                            <a [routerLink]="'reserva'" class="botoes__ancora__feedback">Reserve Já</a>
                         </div>
                     </div>
                 </div>
@@ -274,12 +274,13 @@
                         <div class="card__botoes">
                             <!-- 1ª coluna -->
                             <ul class="botoes">
-                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
+                                <li [routerLink]="'reserva'" class="botoes__item"><img
+                                        src="../../../assets/images/compras.svg" [routerLink]="'reserva'"
                                         alt="Agendar Diária">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->
-                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                            <a [routerLink]="'reserva'" class="botoes__ancora__feedback">Reserve Já</a>
                         </div>
                     </div>
                 </div>

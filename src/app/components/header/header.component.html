@@ -7,30 +7,42 @@
     <ul class="list-menu">
         <li class="list-menu__title">Seja Bem-Vindo</li>
         <hr />
-        <li class="list-menu__item"><a href="#" class="list-menu__link">Contato</a></li>
-        <li class="list-menu__item"><a href="#" class="list-menu__link">Acomodações</a></li>
-        <li class="list-menu__item"><a href="#" class="list-menu__link">Localização</a></li>
-        <li class="list-menu__item"><a href="#" class="list-menu__link">Sobre nós</a></li>
+        <li class="list-menu__item"><a [routerLink]="'/contato'" class="list-menu__link">Contato</a></li>
+        <li class="list-menu__item"><a [routerLink]="'/acomodacao'" class="list-menu__link">Acomodações</a></li>
+        <li class="list-menu__item"><a [routerLink]="'/localizacao'" class="list-menu__link">Localização</a></li>
+        <li class="list-menu__item"><a [routerLink]="'/passeios'" class="list-menu__link">Passeios</a></li>
+        <li class="list-menu__item"><a [routerLink]="'/sobre-nos'" class="list-menu__link">Sobre nós</a></li>
         <li class="list-menu__item list-menu__reservation">
-            <a href="#" class="list-menu__reservation-link">Reservas</a>
+            <a [routerLink]="'/reserva'" class="list-menu__reservation-link">Reservas</a>
         </li>
     </ul>
-    <img src="../../../assets/images/logo-pousada.png" alt="Logo Pousada" class="imagem__logo">
-    <h1 class="container__title"><b class="container__title--negrito">Doce</b>Recanto</h1>
+    <img [routerLink]="''" src="../../../assets/images/logo-pousada.png" alt="Logo Pousada" class="imagem__logo">
+    <h1 [routerLink]="''" class="container__title"><b class="container__title--negrito">Doce</b>Recanto</h1>
 </div>
 
 <ul class="options">
-    <li class="options__item"><a href="#" class="options__link">Contato</a></li>
-    <li class="options__item"><a href="#" class="options__link">Acomodações</a></li>
-    <li class="options__item"><a href="#" class="options__link">Localização</a></li>
-    <li class="options__item"><a href="#" class="options__link">Sobre nós</a></li>
+    <a [routerLink]="'/contato'" class="options__link">
+        <li class="options__item">Contato</li>
+    </a>
+    <a [routerLink]="'/acomodacao'" class="options__link">
+        <li class="options__item">Acomodações</li>
+    </a>
+    <a [routerLink]="'/localizacao'" class="options__link">
+        <li class="options__item">Localização</li>
+    </a>
+    <a [routerLink]="'/passeios'" class="options__link">
+        <li class="options__item">Passeios</li>
+    </a>
+    <a [routerLink]="'/sobre-nos'" class="options__link">
+        <li class="options__item">Sobre nós</li>
+    </a>
 </ul>
 
 <!-- Right container -->
 <div class="container">
-    <a href="#" class="container__link">
+    <a [routerLink]="'/reserva'" class="container__link">
         <img src="../../../assets/images/compras.svg" alt="Carrinhos de compras" class="container__image">
-        <p class="container__texto">Meu carrinho</p>
+        <p class="container__texto">Agenda</p>
     </a>
 
     <a href="#" class="container__link">

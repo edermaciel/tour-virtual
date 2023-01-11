@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { RestrictModule } from './components/restrict';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,10 @@ import { RestrictModule } from './components/restrict';
   imports: [
     BrowserModule,
     RestrictModule,
+    CommonModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     RouterModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
