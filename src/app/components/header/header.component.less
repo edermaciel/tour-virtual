@@ -1,0 +1,174 @@
+hr {
+    margin : -1px;
+    padding: 0;
+}
+
+.header__menu-hamburguer {
+    width              : 50px;
+    height             : 50px;
+    background-image   : url("../../../assets/images/menu.svg");
+    background-repeat  : no-repeat;
+    background-position: center;
+    display            : inline-block;
+}
+
+.container__button:checked~.container__label>.header__menu-hamburguer {
+    background-image: url("../../../assets/images/menu-aberto.svg");
+}
+
+.container__button:checked~.container__label {
+    background: var(--laranja);
+}
+
+.container {
+    display    : flex;
+    align-items: center;
+}
+
+.imagem__logo {
+    width  : 50px;
+    padding: 0 1em 1em 1em;
+}
+
+.container__image {
+    padding: 1em;
+}
+
+.list-menu {
+    display      : none;
+    position     : absolute;
+    top          : 100%;
+    width        : 60vw;
+    border-radius: 10px;
+}
+
+.container__button:checked~.list-menu {
+    display: block;
+}
+
+.list-menu__title,
+.list-menu__item {
+    padding         : 1em;
+    background-color: var(--branco);
+}
+
+.list-menu__reservation {
+    background-color: var(--laranja);
+}
+
+.list-menu__reservation-link {
+    background             : var(--branco);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip        : text;
+    text-transform         : uppercase;
+    font-weight            : 700;
+}
+
+.list-menu__title {
+    color      : var(--laranja);
+    font-weight: 700;
+}
+
+.list-menu__link {
+    background             : var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip        : text;
+    text-transform         : uppercase;
+}
+
+.container__button {
+    display: none;
+}
+
+.container__title,
+.options {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+
+    .container__title,
+    .container__title--negrito {
+        font-family: var(--font-secundaria);
+        font-size  : 30px;
+    }
+
+    .container__title {
+        display    : block;
+        font-weight: 400;
+    }
+
+    .container__title--negrito {
+        font-weight: 700;
+    }
+
+    .options {
+        display: flex;
+    }
+
+    .options__item {
+        padding       : 2.2em 1em;
+        text-transform: uppercase;
+        cursor        : pointer;
+    }
+
+    .options__link {
+        text-decoration: none;
+        color          : var(--preto);
+    }
+
+    .container__image-transparente {
+        display: none;
+    }
+
+    .header__menu-hamburguer {
+        display: none;
+    }
+
+    .list-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .list-menu__item:hover>.list-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration        : none;
+    }
+
+    .list-menu__reservation:hover {
+        opacity: 0.8;
+    }
+
+    .list-menu__reservation:hover>.list-menu__reservation-link {
+        -webkit-text-fill-color: var(--preto);
+        text-decoration        : none;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display        : flex;
+        align-items    : center;
+        text-decoration: none;
+        color          : var(--preto);
+    }
+
+    .options {
+        margin-right: auto;
+    }
+
+    .imagem__logo {
+        width      : 80px;
+        padding    : 0 1em 1em 0;
+        margin-left: -10px;
+    }
+}
