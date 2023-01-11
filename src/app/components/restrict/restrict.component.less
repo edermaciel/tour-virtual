@@ -1,5 +1,62 @@
-.card-link {
-    text-decoration: none;
-    cursor         : pointer;
-    color          : #00945D;
+hr {
+    margin: 0;
+}
+
+.header {
+    background-color: var(--branco);
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    position        : relative;
+    z-index         : 10;
+}
+
+.topics {
+    background: var(--verde-degrade) !important;
+    text-align: center;
+    padding   : 1em 0 1em 1em;
+}
+
+.contact {
+    background-color: var(--branco);
+    padding         : 1em;
+}
+
+.footer {
+    background-color: var(--cor-de-fundo);
+    position        : relative;
+    height          : 10em;
+    align-items     : center;
+}
+
+@media screen and (min-width: 1024px) {
+    .contact {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+    }
+
+    .footer {
+        display        : flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .header {
+        padding: 0 2em;
+    }
+
+    .topics {
+        padding       : 3em 25vw;
+        text-transform: uppercase;
+    }
+
+    .contact {
+        padding: 3em 5vw;
+    }
+
+    .footer {
+        padding: 3em 0;
+    }
 }

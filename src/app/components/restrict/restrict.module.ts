@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RestrictComponent } from './restrict.component';
-import { NavbarModule } from '../navbar';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from '../carousel';
+import { ContactModule } from '../contact';
+import { FooterModule } from '../footer';
+import { HeaderModule } from '../header';
+import { TopicModule } from '../topic';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,11 @@ import { CarouselModule } from '../carousel';
   ],
   imports: [
     CommonModule,
-    NavbarModule,
     CarouselModule,
-    NgbModule
+    ContactModule,
+    FooterModule,
+    HeaderModule,
+    TopicModule
   ]
 })
 export class RestrictModule { }

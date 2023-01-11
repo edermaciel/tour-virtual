@@ -1,29 +1,290 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+<!-- CARROSSEL SECTION -->
+<section class="carrossel">
+    <div class="carrossel__container">
+        <swiper #swiper [config]="config" [spaceBetween]="50" (slideChange)="onSlideChange()">
+            <ng-template swiperSlide>
+                <div class="swiper-slide"><img src="../../../assets/images/banner_01.png" alt=""></div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="swiper-slide"><img src="../../../assets/images/banner_02.png" alt=""></div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="swiper-slide"><img src="../../../assets/images/banner_03.png" alt=""></div>
+            </ng-template>
+        </swiper>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../../../assets/images/first_slide.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="../../../assets/images/second_slide.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="../../../assets/images/third_slide.jpg" class="d-block w-100" alt="...">
+</section>
+<!-- END CARROSSEL SECTION -->
+
+<!-- NOSSA HISTORIA SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Nossa História</h2>
+    <div class="carrossel__container">
+
+        <div class="card">
+            <!-- 1ª linha -->
+            <div class="card__descricao">
+                <!-- 1ª coluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Soledade de Minas</h3>
+                    <h2 class="descricao__titulo-livro">Doce Recanto</h2>
+                    <p class="descricao__texto">
+                        Nós somos uma pousada rural na cidade de Soledade de Minas, localizada no estado de Minas
+                        Gerais. No ano de 2013, abrimos as portas e o coração para nossos hóspedes, oferecendo
+                        nosso Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fugiat nesciunt
+                        accusantium officia ab nostrum excepturi aut quo minima sit doloribus delectus, illo tempore
+                        omnis nobis vero? Asperiores, assumenda. Eveniet, eligendi deserunt maxime vitae id facilis
+                        non commodi similique nobis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                        sit officiis aut facere consequuntur, obcaecati veritatis voluptates aspernatur corrupti
+                        possimus, eos nulla. Accusamus sapiente recusandae laborum consectetur vel asperiores
+                        debitis placeat quas dicta. Aperiam expedita porro, autem voluptas blanditiis nemo.
+                    </p>
+                </div>
+                <!-- 2ª coluna -->
+                <img src="../../../assets/images/nossa-historia.png" class="descricao__imagem-historia"
+                    alt="Escritora Juliana Agarikov">
+            </div>
+
+            <!-- 2ª linha -->
+            <div class="card__botoes">
+                <!-- 1ª coluna -->
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="../../../assets/images/favoritos.svg" alt="Favoritar Livro"></li>
+                    <li class="contador__likes">
+                        <p>352</p>
+                    </li>
+                </ul>
+                <!-- 2ª coluna -->
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+            </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+</section>
+<!-- END NOSSA HISTORIA SECTION -->
+
+<!-- VENHA NOS CONHECER! SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Venha nos conhecer!</h2>
+    <div class="carrossel__container">
+
+        <div class="card">
+            <!-- PISCINA -->
+            <!-- 1ª linha -->
+            <div class="card__descricao card__descricao-conhecer">
+                <!-- 1ª coluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Lazer</h3>
+                    <h2 class="descricao__titulo-livro">Piscina</h2>
+                    <p class="descricao__texto-conhecer">
+                        Nada como uma bela piscina no calor, né?!
+                    </p>
+                    <div class="descricao__horario-uso">
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                        <p>8h às 19h</p>
+                    </div>
+                    <div class="descricao__dias-uso">
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                        <p>de terça à domingo</p>
+                    </div>
+                </div>
+                <!-- 2ª coluna -->
+                <img src="../../../assets/images/piscina.png" class="descricao__imagem" alt="Piscina">
+            </div>
+            <!-- END PISCINA -->
+
+            <!-- CHURRASQUEIRA -->
+            <div class="card__descricao-churrasqueira">
+                <!-- 1ª coluna -->
+                <img src="../../../assets/images/churrasqueira.png" class="descricao__imagem-churrasqueira"
+                    alt="Churrasqueira">
+                <!-- 2ª coluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Lazer</h3>
+                    <h2 class="descricao__titulo-livro">Churrasqueira</h2>
+                    <p class="descricao__texto-conhecer">
+                        Um ótimo espaço aberto para curtir um churrasco com a família reunida!
+                    </p>
+                    <div class="descricao__horario-uso" style="justify-content:end;">
+                        <p>10h às 23h</p>
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                    </div>
+                    <div class="descricao__dias-uso" style="justify-content:end;">
+                        <p>de terça à domingo</p>
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                    </div>
+                </div>
+            </div>
+            <!-- END CHURRASQUEIRA -->
+
+            <div class="card__descricao-cafe-manha">
+                <!-- 1ª coluna -->
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Incluso</h3>
+                    <h2 class="descricao__titulo-livro">Café da manhã</h2>
+                    <p class="descricao__texto-conhecer">
+                        Venha se deliciar com um tradicional café mineiro, e claro, o pão de queijo nunca falta por
+                        aqui!
+                    </p>
+                    <div class="descricao__horario-uso">
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                        <p>7h às 10h</p>
+                    </div>
+                    <div class="descricao__dias-uso">
+                        <img src="../../../assets/images/compras.svg" alt="Agendar Diária">
+                        <p>de quinta à domingo</p>
+                    </div>
+                </div>
+                <!-- 2ª coluna -->
+                <img src="../../../assets/images/cafe.png" class="descricao__imagem-cafe" alt="Café da manhã">
+            </div>
+
+            <!-- 2ª linha -->
+            <div class="card__botoes">
+                <!-- 1ª coluna -->
+                <ul class="botoes">
+                    <li class="botoes__item botao__reservar"><img src="../../../assets/images/compras.svg"
+                            alt="Agendar Diária">
+                    </li>
+                </ul>
+                <!-- 2ª coluna -->
+                <a href="#" class="botoes__ancora-lazer">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END VENHA NOS CONHECER! SECTION -->
+
+<!-- FEEDBACK SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Seu feedback importa! ♥</h2>
+    <div class="carrossel__container">
+        <swiper #swiper2 [config]="configFeedback" [spaceBetween]="50" (slideChange)="onSlideChange()"
+            [pagination]="{clickable:true}">
+            <ng-template swiperSlide>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__estrelas">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                        </div>
+                        <!-- 1ª linha -->
+                        <div class="card__descricao">
+                            <!-- 1ª coluna -->
+                            <div class="descricao__container-feedback">
+                                <h3 class="descricao__titulo">Hóspede</h3>
+                                <h2 class="descricao__titulo-livro">Jane Santos</h2>
+                                <p class="descricao__feedback">
+                                    Estive esse final de semana nesse lugar maravilhoso...
+                                    Um recanto pra descansar contato com a natureza. Tudo maravilhoso, o
+                                    proprietário nos recebeu tão bem, a moça que faz o café é pura gentileza e o
+                                    filho do proprietário também, com uma disponibilidade grande!
+                                    Eu recomendo 100%! Votaremos com certeza!
+                                </p>
+                            </div>
+                            <!-- 2ª coluna -->
+                            <img src="../../../assets/images/trip-advisor.png" class="descricao__feedback__images"
+                                alt="Feedback Jane Santos">
+                        </div>
+
+                        <!-- 2ª linha -->
+                        <div class="card__botoes">
+                            <!-- 1ª coluna -->
+                            <ul class="botoes">
+                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
+                                        alt="Agendar Diária">
+                                </li>
+                            </ul>
+                            <!-- 2ª coluna -->
+                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__estrelas">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                        </div>
+                        <!-- 1ª linha -->
+                        <div class="card__descricao">
+                            <!-- 1ª coluna -->
+                            <div class="descricao__container-feedback">
+                                <h3 class="descricao__titulo">Hóspede</h3>
+                                <h2 class="descricao__titulo-livro">Márcio Emilio</h2>
+                                <p class="descricao__feedback">
+                                    Lugar tranquilo excelente chalés ótimos proprietários atenciosos café da manhã
+                                    muito bom recomendo!
+                                </p>
+                            </div>
+                            <!-- 2ª coluna -->
+                            <img src="../../../assets/images/trip-advisor.png" class="descricao__feedback__images"
+                                alt="Feedback Márcio Emilio">
+                        </div>
+
+                        <!-- 2ª linha -->
+                        <div class="card__botoes">
+                            <!-- 1ª coluna -->
+                            <ul class="botoes">
+                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
+                                        alt="Agendar Diária">
+                                </li>
+                            </ul>
+                            <!-- 2ª coluna -->
+                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="card__estrelas">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                            <img src="../../../assets/images/star.svg" alt="">
+                        </div>
+                        <!-- 1ª linha -->
+                        <div class="card__descricao">
+                            <!-- 1ª coluna -->
+                            <div class="descricao__container-feedback">
+                                <h3 class="descricao__titulo">Hóspede</h3>
+                                <h2 class="descricao__titulo-livro">Talita Meireles</h2>
+                                <p class="descricao__feedback">
+                                    Lugar super aconchegante, com café da manhã delicioso, tem parquinho para as
+                                    crianças, tem piscina, rede, laguinho, muito bom mesmo, amei, recomendo e vou
+                                    voltar
+                                </p>
+                            </div>
+                            <!-- 2ª coluna -->
+                            <img src="../../../assets/images/trip-advisor.png" class="descricao__feedback__images"
+                                alt="Feedback Talita Meireles">
+                        </div>
+
+                        <!-- 2ª linha -->
+                        <div class="card__botoes">
+                            <!-- 1ª coluna -->
+                            <ul class="botoes">
+                                <li class="botoes__item"><img src="../../../assets/images/compras.svg"
+                                        alt="Agendar Diária">
+                                </li>
+                            </ul>
+                            <!-- 2ª coluna -->
+                            <a href="#" class="botoes__ancora__feedback">Reserve Já</a>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</section>
+<!-- END FEEDBACK SECTION -->

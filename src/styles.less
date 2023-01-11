@@ -1,15 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'swiper/less';
+@import 'swiper/less/navigation';
+@import 'swiper/less/pagination';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.separator {
-    height: 10px;
-    background-image: linear-gradient(to bottom, #0ab173, #07aa6d, #05a268, #029b62, #00945d);
+:root {
+    --cor-de-fundo   : #EBECEE;
+    --branco         : #FFFFFF;
+    --laranja        : #EB9800;
+    --laranja-degrade: linear-gradient(97.54deg, #eb9800 35.49%, #d6c200 165.37%);
+    --azul-degrade   : linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul           : #002F52;
+    --preto          : #000000;
+    --cinza          : #474746;
+    --cinza-claro    : #858585;
+    --verde-degrade  : linear-gradient(97.54deg, #00945D 35.49%, #008373 165.37%);
+    --verde          : #2A5F36;
+    --font-principal : "Poppins";
+    --font-secundaria: "Josefin Sans";
 }
-.large-separator {
-    height: 40px;
-    background-image: linear-gradient(to bottom, #0ab173, #07aa6d, #05a268, #029b62, #00945d);
-    opacity: 0.7;
-    text-align: center;
+
+::-webkit-scrollbar {
+    width     : 8px;
+    height    : 8px;
+    background: 0 0;
+}
+
+::-webkit-scrollbar-corner {
+    background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4e4e4e;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    font-family     : var(--font-principal);
+    font-size       : 16px;
+    font-weight     : 400;
+}
+
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin        : 0;
+    padding       : 0;
+    border        : 0;
+    font-size     : 100%;
+    font          : inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing : 0;
 }
