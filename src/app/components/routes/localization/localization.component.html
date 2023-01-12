@@ -1,7 +1,60 @@
 <app-header class="header"></app-header>
 
-<div class="container">
-    <div id="map"> </div>
-</div>
+<!-- CIRCUITO DAS AGUAS -->
+<section class="localization">
+    <h2 class="localization__title">Circuito das Águas</h2>
+    <div class="localization__container">
+        <div class="card__localization">
+            <div class="card__description">
+                <div class="description">
+                    <ul class="list__wrapper">
+                        <li class="list__item" *ngFor="let item of listItems">
+                            <img [src]="item.image" class="list__image" [alt]="item.title">
+                            <h3 class="list__title">{{ item.title }}</h3>
+                            <p class="list__paragraph">{{ item.content }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CIRCUITO DAS AGUAS -->
 
+<!-- PASSEIOS -->
+<section class="localization">
+    <h2 class="localization__title">Passeios Recomendados</h2>
+    <div class="localization__container">
+        <div class="card__localization">
+            <div class="card__description">
+                <div class="description">
+                    <ul class="list__wrapper">
+                        <li class="list__item" *ngFor="let item of cities">
+                            <img [src]="item.image" class="list__image-recommend" [alt]="item.title">
+                            <h3 class="list__title">{{ item.title }}</h3>
+                            <p class="list__paragraph">{{ item.content }}</p>
+                            <a class="list__ancor" target="_blank" [href]="item.link_social">
+                                Acessar Página
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END PASSEIOS -->
+
+<!-- LOCALIZAÇÃO DA POUSADA -->
+<section class="localization">
+    <h2 class="localization__title">Localização da pousada!</h2>
+    <div class="localization__container">
+        <div class="card__localization">
+            <div id="map"> </div>
+        </div>
+    </div>
+</section>
+<!-- END LOCALIZAÇÃO DA POUSADA -->
+
+<hr style="margin: 0; padding: 0; " />
 <app-footer class="footer"></app-footer>
