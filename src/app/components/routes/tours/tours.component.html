@@ -1,5 +1,49 @@
 <app-header class="header"></app-header>
-<h1 style="text-align: center; margin: 5em;">
-    TOURS COMPONENT
-</h1>
+
+<!-- CIRCUITO DAS AGUAS -->
+<section class="localization">
+    <h2 class="localization__title">Circuito das Águas</h2>
+    <div class="localization__container">
+        <div class="card__localization">
+            <div class="card__description">
+                <div class="description">
+                    <ul class="list__wrapper">
+                        <li class="list__item" *ngFor="let item of listItems">
+                            <img [src]="item.image" class="list__image" [alt]="item.title">
+                            <h3 class="list__title">{{ item.title }}</h3>
+                            <p class="list__paragraph">{{ item.content }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CIRCUITO DAS AGUAS -->
+
+<!-- PASSEIOS -->
+<section class="localization">
+    <h2 class="localization__title">Cidades próximas</h2>
+    <div class="localization__container">
+        <div class="card__localization">
+            <div class="card__description">
+                <div class="description">
+                    <ul class="list__wrapper">
+                        <li class="list__item" *ngFor="let item of cities">
+                            <img [src]="item.image" class="list__image-recommend" [alt]="item.title">
+                            <h3 class="list__title">{{ item.title }}</h3>
+                            <p class="list__paragraph">{{ item.content }}</p>
+                            <a class="list__ancor" target="_blank" [href]="item.link_social">
+                                Acessar Página
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END PASSEIOS -->
+
+<hr style="margin: 0; padding: 0; " />
 <app-footer class="footer"></app-footer>
