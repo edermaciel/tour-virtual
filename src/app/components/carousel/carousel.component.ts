@@ -15,7 +15,7 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   @ViewChild('swiper2', { static: false }) swiper2!: SwiperComponent;
   config: any = {};
   configFeedback: any = {};
-
+  loveCounter = 189;
   constructor() { }
 
   ngOnInit(): void {
@@ -50,6 +50,21 @@ export class CarouselComponent implements OnInit, AfterViewInit {
       this.swiper2.swiperRef.fadeEffect = true;
       this.swiper2.swiperRef.autoplay.start();
     }, 1000);
+  }
+
+  loveClick(event: Event): void {
+    const blackHeart = 'assets/images/heart-black.png';
+    const redHeart = 'assets/images/heart-red.png';
+
+    if ((<HTMLImageElement>event.target).src.includes('black')) {
+      (<HTMLImageElement>event.target).src = (<HTMLImageElement>event.target).src.replace(blackHeart, redHeart)
+      this.loveCounter++;
+    } else {
+      (<HTMLImageElement>event.target).src = (<HTMLImageElement>event.target).src.replace(redHeart, blackHeart)
+      this.loveCounter--;
+    }
+
+    console.log((<HTMLImageElement>event.target).src);
   }
 
   onSlideChange() {

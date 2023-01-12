@@ -41,12 +41,13 @@
 <!-- Right container -->
 <div class="container">
     <a [routerLink]="'/reserva'" class="container__link">
-        <img src="assets/images/compras.svg" alt="Carrinhos de compras" class="container__image">
+        <img src="assets/images/calendar.png" alt="Confira nossa agenda" width="30px" height="30px"
+            class="container__image">
         <p class="container__texto">Agenda</p>
     </a>
 
-    <a href="#" class="container__link">
-        <img src="assets/images/usuário.svg" alt="Meu perfil" class="container__image">
-        <p class="container__texto">Meu Perfil</p>
+    <a [routerLink]="'/contato'" class="container__link">
+        <img src="assets/images/e-mail.png" width="36px" height="36px" alt="Contato" class="container__image">
+        <p class="container__texto">Contato</p>
     </a>
 </div>

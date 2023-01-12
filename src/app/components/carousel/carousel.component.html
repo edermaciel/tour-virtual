@@ -1,7 +1,7 @@
 <!-- CARROSSEL SECTION -->
 <section class="carrossel">
     <div class="carrossel__container">
-        <swiper #swiper [config]="config" [spaceBetween]="50" (slideChange)="onSlideChange()">
+        <swiper #swiper [config]="config" [spaceBetween]="25" (slideChange)="onSlideChange()">
             <ng-template swiperSlide>
                 <div class="swiper-slide"><img src="assets/images/banner_01.png" alt=""></div>
             </ng-template>
@@ -41,16 +41,17 @@
                 </div>
                 <!-- 2ª coluna -->
                 <img src="assets/images/nossa-historia.png" class="descricao__imagem-historia"
-                    alt="Escritora Juliana Agarikov">
+                    alt="Pousada doce recanto">
             </div>
 
             <!-- 2ª linha -->
             <div class="card__botoes">
                 <!-- 1ª coluna -->
                 <ul class="botoes">
-                    <li class="botoes__item"><img src="assets/images/favoritos.svg" alt="Favoritar Livro"></li>
+                    <li class="botoes__item"><img (click)="loveClick($event)" src="assets/images/heart-black.png"
+                            width="50px" height="50px" alt="Amei"></li>
                     <li class="contador__likes">
-                        <p>352</p>
+                        <p>{{loveCounter}}</p>
                     </li>
                 </ul>
                 <!-- 2ª coluna -->
@@ -78,11 +79,11 @@
                         Nada como uma bela piscina no calor, né?!
                     </p>
                     <div class="descricao__horario-uso">
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                         <p>8h às 19h</p>
                     </div>
                     <div class="descricao__dias-uso">
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                         <p>de terça à domingo</p>
                     </div>
                 </div>
@@ -104,11 +105,11 @@
                     </p>
                     <div class="descricao__horario-uso" style="justify-content:end;">
                         <p>10h às 23h</p>
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                     </div>
                     <div class="descricao__dias-uso" style="justify-content:end;">
                         <p>de terça à domingo</p>
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                     </div>
                 </div>
             </div>
@@ -124,11 +125,11 @@
                         aqui!
                     </p>
                     <div class="descricao__horario-uso">
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                         <p>7h às 10h</p>
                     </div>
                     <div class="descricao__dias-uso">
-                        <img src="assets/images/compras.svg" alt="Agendar Diária">
+                        <img src="assets/images/clock.png" alt="Horarios de uso" width="30px" height="30px">
                         <p>de quinta à domingo</p>
                     </div>
                 </div>
@@ -137,12 +138,13 @@
             </div>
 
             <!-- 2ª linha -->
-            <div class="card__botoes">
+            <div class="card__botoes" style="justify-content: right !important;">
                 <!-- 1ª coluna -->
-                <ul class="botoes">
-                    <li class="botoes__item botao__reservar"><img src="assets/images/compras.svg" alt="Agendar Diária">
+                <!-- <ul class="botoes">
+                    <li class="botoes__item botao__reservar"><img src="assets/images/calendar.png" alt="Agendar Diária"
+                            width="50px" height="50px">
                     </li>
-                </ul>
+                </ul> -->
                 <!-- 2ª coluna -->
                 <a [routerLink]="'sobre-nos'" class="botoes__ancora-lazer">Saiba mais</a>
             </div>
@@ -191,7 +193,8 @@
                             <!-- 1ª coluna -->
                             <ul class="botoes">
                                 <li [routerLink]="'reserva'" class="botoes__item"><img [routerLink]="'reserva'"
-                                        src="assets/images/compras.svg" alt="Agendar Diária">
+                                        src="assets/images/calendar.png" alt="Agendar Diária" width="50px"
+                                        height="50px">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->
@@ -230,8 +233,8 @@
                         <div class="card__botoes">
                             <!-- 1ª coluna -->
                             <ul class="botoes">
-                                <li [routerLink]="'reserva'" class="botoes__item"><img src="assets/images/compras.svg"
-                                        [routerLink]="'reserva'" alt="Agendar Diária">
+                                <li [routerLink]="'reserva'" class="botoes__item"><img src="assets/images/calendar.png"
+                                        [routerLink]="'reserva'" alt="Agendar Diária" width="50px" height="50px">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->
@@ -271,8 +274,8 @@
                         <div class="card__botoes">
                             <!-- 1ª coluna -->
                             <ul class="botoes">
-                                <li [routerLink]="'reserva'" class="botoes__item"><img src="assets/images/compras.svg"
-                                        [routerLink]="'reserva'" alt="Agendar Diária">
+                                <li [routerLink]="'reserva'" class="botoes__item"><img src="assets/images/calendar.png"
+                                        [routerLink]="'reserva'" alt="Agendar Diária" width="50px" height="50px">
                                 </li>
                             </ul>
                             <!-- 2ª coluna -->

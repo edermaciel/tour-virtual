@@ -5,6 +5,7 @@
     text-transform  : uppercase;
     font-size       : 18px;
     font-weight     : 700;
+    margin-top      : -5px;
     padding         : 0.5em 0 0.5em 0;
 }
 
@@ -74,15 +75,18 @@
 }
 
 .descricao__titulo {
-    color      : var(--laranja);
-    font-weight: 700;
+    color        : var(--laranja);
+    font-weight  : 700;
+    padding      : 0;
+    margin-bottom: -15px;
 }
 
 .descricao__titulo-livro {
     color      : var(--verde);
     font-size  : 18px;
     font-weight: 700;
-    padding    : .6em 0;
+    padding    : .5em 0 .3em 0;
+    margin     : 0;
 }
 
 .descricao__texto {
@@ -143,7 +147,7 @@
 }
 
 .botoes__ancora__feedback {
-    background-color: var(--laranja);
+    background-color: var(--verde);
     padding         : 1em 4em;
     margin          : .7em 0;
     color           : var(--branco);
@@ -179,15 +183,19 @@
 }
 
 .descricao__imagem-historia {
-    width        : 150px;
+    display      : inherit;
+    align-self   : flex-end;
+    height       : 182px;
     border-radius: 10px;
     margin-left  : .5em;
 }
 
 .descricao__imagem-churrasqueira {
-    width        : 150px;
+    height       : 100px;
     border-radius: 10px;
     margin-right : .5em;
+    display      : inherit;
+    align-self   : center;
 }
 
 .descricao__feedback__images {
@@ -207,6 +215,12 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .card__botoes {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : flex-end;
+    }
+
     .swiper-slide img {
         width : 100%;
         height: auto;
@@ -228,12 +242,30 @@
         font-weight: 500;
         display    : flex;
         align-items: center;
+        margin-top : .5em;
         font-size  : 18px;
     }
 
+    .card__descricao-churrasqueira {
+        .descricao__horario-uso p {
+            margin       : 0;
+            padding-right: .3em;
+        }
 
-    .carrossel__titulo {
-        font-size: 26px;
+        .descricao__dias-uso p {
+            margin       : 0;
+            padding-right: .3em;
+        }
+    }
+
+    .descricao__horario-uso p {
+        margin      : 0;
+        padding-left: .3em;
+    }
+
+    .descricao__dias-uso p {
+        margin      : 0;
+        padding-left: .3em;
     }
 
     .card {
@@ -261,7 +293,11 @@
     }
 
     .descricao__imagem-churrasqueira {
-        width: 400px;
+        height       : 250px;
+        border-radius: 10px;
+        margin-right : .5em;
+        display      : inherit;
+        align-self   : center;
     }
 
     .botoes__ancora {
@@ -303,7 +339,9 @@
     }
 
     .descricao__feedback {
-        font-size: 18px;
+        font-size : 18px;
+        overflow-y: hidden;
+        max-height: 10em;
     }
 
     .descricao__feedback__images {
@@ -333,6 +371,7 @@
 }
 
 @media screen and (min-width:1366px) {
+
     .carrossel__container {
         display    : flex;
         align-items: center;
@@ -370,14 +409,25 @@
     }
 
     .descricao__imagem-churrasqueira {
-        width : 30em;
-        height: 285px;
+        height       : 310px;
+        width        : auto;
+        border-radius: 10px;
+        margin-right : .5em;
+        display      : inherit;
+        align-self   : center;
     }
 
     .descricao__imagem-cafe {
         width       : 500px;
         height      : 250px;
         margin-right: 4em;
+    }
+
+    .descricao__titulo {
+        color        : var(--laranja);
+        font-weight  : 700;
+        padding      : 0;
+        margin-bottom: -10px;
     }
 
     .botoes__ancora-lazer {

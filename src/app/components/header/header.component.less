@@ -44,7 +44,18 @@ hr {
 }
 
 .container__button:checked~.list-menu {
-    display: block;
+    display  : block;
+    animation: 1s openMenu;
+}
+
+@keyframes openMenu {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .list-menu__title,
@@ -83,9 +94,24 @@ hr {
     display: none;
 }
 
-.container__title,
 .options {
     display: none;
+}
+
+.container__title {
+    display: block;
+    margin : 0 0 0 -0.2em;
+}
+
+.container__title,
+.container__title--negrito {
+    font-family: var(--font-secundaria);
+    font-size  : 21px;
+    cursor     : pointer;
+}
+
+.container__title--negrito {
+    font-weight: 700;
 }
 
 .container__texto {
@@ -104,6 +130,7 @@ hr {
     .container__title {
         display    : block;
         font-weight: 400;
+        margin     : 0;
     }
 
     .container__title--negrito {
