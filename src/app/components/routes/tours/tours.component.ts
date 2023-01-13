@@ -51,19 +51,19 @@ export class ToursComponent implements OnInit {
       title: "São Lourenço",
       content: "Distância: 8.8km (14min)",
       image: 'assets/images/saolourenco.png',
-      link_social: ''
+      link_social: 'https://www.instagram.com/saolourenco__mg'
     },
     {
       title: "Baependi",
       content: "Distância: 25.3km (28min)",
       image: 'assets/images/baependi.png',
-      link_social: ''
+      link_social: 'https://www.instagram.com/baependi_mg'
     },
     {
       title: "Caxambu",
       content: "Distância: 20.2km (19min)",
       image: 'assets/images/caxambu.png',
-      link_social: ''
+      link_social: 'https://www.instagram.com/caxambu_mg.turismo'
     },
   ]
 
