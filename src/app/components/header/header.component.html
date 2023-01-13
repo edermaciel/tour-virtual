@@ -4,39 +4,31 @@
     <label for="menu" class="container__label">
         <span class="header__menu-hamburguer container__image"></span>
     </label>
+    <!-- MENU MOBILE -->
     <ul class="list-menu">
         <li class="list-menu__title">Seja Bem-Vindo</li>
         <hr />
-        <li class="list-menu__item"><a [routerLink]="'/contato'" class="list-menu__link">Contato</a></li>
-        <li class="list-menu__item"><a [routerLink]="'/acomodacao'" class="list-menu__link">Acomodações</a></li>
-        <li class="list-menu__item"><a [routerLink]="'/localizacao'" class="list-menu__link">Localização</a></li>
-        <li class="list-menu__item"><a [routerLink]="'/passeios'" class="list-menu__link">Passeios</a></li>
-        <li class="list-menu__item"><a [routerLink]="'/sobre-nos'" class="list-menu__link">Sobre nós</a></li>
+        <li *ngFor="let item of listMenu" class="list-menu__item">
+            <a class="list-menu__link" [routerLink]="item.link">{{item.title}}</a>
+        </li>
         <li class="list-menu__item list-menu__reservation">
             <a [routerLink]="'/reserva'" class="list-menu__reservation-link">Reservas</a>
         </li>
     </ul>
+    <!-- END MENU MOBILE -->
     <img [routerLink]="''" src="assets/images/logo-pousada.png" alt="Logo Pousada" class="imagem__logo">
     <h1 [routerLink]="''" class="container__title"><b class="container__title--negrito">Doce</b>Recanto</h1>
 </div>
 
+<!-- MENU DESKTOP/TABLET -->
 <ul class="options">
-    <a [routerLink]="'/contato'" class="options__link">
-        <li class="options__item">Contato</li>
-    </a>
-    <a [routerLink]="'/acomodacao'" class="options__link">
-        <li class="options__item">Acomodações</li>
-    </a>
-    <a [routerLink]="'/localizacao'" class="options__link">
-        <li class="options__item">Localização</li>
-    </a>
-    <a [routerLink]="'/passeios'" class="options__link">
-        <li class="options__item">Passeios</li>
-    </a>
-    <a [routerLink]="'/sobre-nos'" class="options__link">
-        <li class="options__item">Sobre nós</li>
-    </a>
+    <ng-container *ngFor="let item of listMenu">
+        <a [routerLink]="item.link" class="options__link">
+            <li class="options__item">{{item.title}}</li>
+        </a>
+    </ng-container>
 </ul>
+<!-- END MENU DESKTOP/TABLET -->
 
 <!-- Right container -->
 <div class="container">
