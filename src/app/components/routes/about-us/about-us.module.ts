@@ -6,6 +6,7 @@ import { AboutRoutingModule } from './about-us-routing.module';
 import { AboutUsComponent } from './about-us.component';
 import { HeaderModule } from '../../header';
 import { FooterModule } from '../../footer';
+import { StickyWppModule } from 'src/app/shared/sticky-wpp';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterModule } from '../../footer';
     RouterModule,
     AboutRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    StickyWppModule
   ]
 })
 export class AboutRouteModule { }

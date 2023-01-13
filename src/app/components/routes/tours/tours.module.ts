@@ -5,6 +5,7 @@ import { ToursComponent } from './tours.component';
 import { HeaderModule } from '../../header';
 import { ToursRoutingModule } from './tours-routing.module';
 import { FooterModule } from '../../footer';
+import { StickyWppModule } from 'src/app/shared/sticky-wpp';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterModule } from '../../footer';
     CommonModule,
     HeaderModule,
     ToursRoutingModule,
-    FooterModule
+    FooterModule,
+    StickyWppModule
   ]
 })
 export class ToursModule { }

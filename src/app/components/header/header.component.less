@@ -119,8 +119,14 @@ hr {
 }
 
 @media screen and (min-width:1024px) {
+    .container__link {
+        transition: transform 0.5s ease;
+        transform : scale(1);
+    }
+
     .container__link:hover {
-        opacity: 0.8;
+        opacity  : 0.8;
+        transform: scale(1.3);
     }
 
     .container__title,
@@ -153,6 +159,8 @@ hr {
     .options__link {
         text-decoration: none;
         color          : var(--preto);
+        transition     : transform 0.5s ease;
+        transform      : scale(1);
     }
 
     .options__link:hover {
@@ -161,6 +169,7 @@ hr {
         margin-top      : 1em;
         border-radius   : 30em;
         color           : var(--branco);
+        transform       : scale(0.8);
 
         .options__item {
             padding-top: 16px;

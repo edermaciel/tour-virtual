@@ -7,7 +7,7 @@ import { ContactLayoutModule } from '../contact-layout';
 import { FooterModule } from '../footer';
 import { HeaderModule } from '../header';
 import { TopicModule } from '../topic';
-
+import { StickyWppModule } from 'src/app/shared/sticky-wpp';
 @NgModule({
   declarations: [
     RestrictComponent
@@ -18,7 +18,8 @@ import { TopicModule } from '../topic';
     ContactLayoutModule,
     FooterModule,
     HeaderModule,
-    TopicModule
+    TopicModule,
+    StickyWppModule
   ]
 })
 export class RestrictModule { }

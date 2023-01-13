@@ -71,6 +71,10 @@ export class ToursComponent implements OnInit {
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+      let btn = document.getElementById('tours-sticky-btn') as HTMLElement;
+      btn.classList.add('fade-in');
+    }, 2500);
   }
 
 }

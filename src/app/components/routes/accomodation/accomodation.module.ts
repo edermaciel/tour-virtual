@@ -6,7 +6,7 @@ import { AccomodationComponent } from './accomodation.component';
 import { AccomodationRoutingModule } from './accomodation-routing.module';
 import { HeaderModule } from '../../header';
 import { FooterModule } from '../../footer';
-
+import { StickyWppModule } from 'src/app/shared/sticky-wpp';
 @NgModule({
   declarations: [
     AccomodationComponent
@@ -16,7 +16,8 @@ import { FooterModule } from '../../footer';
     RouterModule,
     AccomodationRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    StickyWppModule
   ]
 })
 export class AccomodationRouteModule { }

@@ -10,6 +10,11 @@ export class AccomodationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      let btn = document.getElementById('accomodation-sticky-btn') as HTMLElement;
+      btn.classList.add('fade-in');
+    }, 2500);
   }
 
 }
