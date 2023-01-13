@@ -13,7 +13,7 @@ export class ReservationComponent implements OnInit {
     window.scrollTo(0, 0);
     setTimeout(() => {
       let btn = document.getElementById('reservation-sticky-btn') as HTMLElement;
-      btn.classList.add('fade-in');
+      if (btn) btn.classList.add('fade-in');
     }, 2500);
   }
 

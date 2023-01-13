@@ -13,7 +13,7 @@ export class AccomodationComponent implements OnInit {
     window.scrollTo(0, 0);
     setTimeout(() => {
       let btn = document.getElementById('accomodation-sticky-btn') as HTMLElement;
-      btn.classList.add('fade-in');
+      if (btn) btn.classList.add('fade-in');
     }, 2500);
   }
 

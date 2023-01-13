@@ -18,7 +18,7 @@ export class AboutUsComponent implements OnInit {
     window.scrollTo(0, 0);
     setTimeout(() => {
       let btn = document.getElementById('about-us-sticky-btn') as HTMLElement;
-      btn.classList.add('fade-in');
+      if (btn) btn.classList.add('fade-in');
     }, 2500);
   }
 
