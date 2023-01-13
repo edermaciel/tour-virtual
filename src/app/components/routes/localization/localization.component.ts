@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 import * as L from 'leaflet';
-import { Observable, Subscriber } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 @Component({
   selector: 'app-localization',
@@ -14,6 +13,7 @@ export class LocalizationComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
   ngAfterViewInit(): void {
