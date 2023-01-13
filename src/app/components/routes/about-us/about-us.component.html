@@ -2,7 +2,7 @@
 <!-- CARROSSEL SECTION -->
 <section class="carrossel">
     <div class="carrossel__container">
-        <img class="image__header" src="assets/images/banner_03.png" alt="Pousada Doce Recanto">
+        <img class="image__header" [src]="aboutUsObj.image" alt="Pousada Doce Recanto">
     </div>
 </section>
 <!-- END CARROSSEL SECTION -->
@@ -13,19 +13,10 @@
         <div class="card__about-us">
             <div class="card__description">
                 <div class="description">
-                    <h3 class="description__title">Soledade de Minas</h3>
-                    <h2 class="description__title-pousada">Pousada Doce Recanto</h2>
+                    <h3 class="description__title">{{ aboutUsObj.title }}</h3>
+                    <h2 class="description__title-pousada">{{ aboutUsObj.subTitle }}</h2>
                     <p class="description__text">
-                        A Pousada Doce Recanto é mais do que apenas uma propriedade localizada na cidade de Soledade de
-                        Minas. É um lugar onde a natureza exuberante se une à história e à herança de uma família. A
-                        propriedade, passada de geração em geração, herdada do Sr. Justo Maciel, o patriarca da família,
-                        é cercada por uma fauna e flora rica e abundante. Os hóspedes podem desfrutar de passeios ao
-                        bosque, onde é possível apreciar a diversidade de espécies de plantas e animais, além de um
-                        passeio no apiário, onde os hóspedes podem conhecer o mundo das abelhas e seus produtos. Para os
-                        amantes de cavalos, a pousada oferece também passeios a cavalo, onde é possível explorar a bela
-                        paisagem da propriedade. A Pousada Doce Recanto é o lugar perfeito para aqueles que buscam
-                        tranquilidade, contato com a natureza e uma ligação com a história e a herança de uma família. E
-                        para aqueles que desejam conhecer as principais estâncias hidrominerais, São Lourenço e Caxambú.
+                        {{ aboutUsObj.description }}
                     </p>
                 </div>
             </div>
