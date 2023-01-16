@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'shared-sticky-wpp',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sticky-wpp.component.less']
 })
 export class StickyWppComponent implements OnInit {
+  @Input('showScrollTop') showScrollTop: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
