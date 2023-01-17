@@ -1,0 +1,44 @@
+<app-header class="header"></app-header>
+
+<section class="contact">
+    <h2 class="contact__title">Contato</h2>
+    <div class="contact__container">
+        <div class="card__contact">
+            <div class="card__description">
+                <div class="description">
+                    <h3 class="description__title">{{ contactObj.title }}</h3>
+                    <h2 class="description__title-pousada">{{ contactObj.subTitle }}</h2>
+                    <p class="description__text"> {{ contactObj.description }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="contact__container">
+    <div class="card__contact">
+        <div class="card__description">
+            <div class="owner__contact">
+                <ul class="owner__list">
+                    <li *ngFor="let owner of ownerList">
+                        <img [src]="owner.ownerImage" class="owner__image" [alt]="owner.ownerName">
+                        <h4 class="description__title">{{ owner.ownerStatus }}</h4>
+                        <h2 class="description__title-pousada">{{ owner.ownerName }}</h2>
+                        <a [href]="owner.ownerLink" target="_blank" class="owner__description-text">
+                            <img class="owner__icon-image" src="assets/images/whatsapp.png" alt="Whatsapp">
+                            {{ owner.ownerNumber }}
+                        </a>
+                        <a target="_blank" class="owner__description-email" style="margin-top: .5em;"> <img
+                                class="owner__icon-image" src="assets/images/email-icon.svg" alt="Email">
+                            {{ owner.ownerEmail }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer class="footer"></app-footer>
+<shared-sticky-wpp id="contact-sticky-btn" class="whatsapp-effect"></shared-sticky-wpp>

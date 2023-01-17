@@ -1,0 +1,28 @@
+<app-header class="header"></app-header>
+<!-- CARROSSEL SECTION -->
+<section class="carrossel">
+    <div class="carrossel__container">
+        <img class="image__header" [src]="aboutUsObj.image" alt="Pousada Doce Recanto">
+    </div>
+</section>
+<!-- END CARROSSEL SECTION -->
+
+<section class="about-us">
+    <h2 class="about-us__title">Nossa História</h2>
+    <div class="about-us__container">
+        <div class="card__about-us">
+            <div class="card__description">
+                <div class="description">
+                    <h3 class="description__title">{{ aboutUsObj.title }}</h3>
+                    <h2 class="description__title-pousada">{{ aboutUsObj.subTitle }}</h2>
+                    <p class="description__text">
+                        {{ aboutUsObj.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer [showName]="false" class="footer"></app-footer>
+<shared-sticky-wpp id="about-us-sticky-btn" class="whatsapp-effect"></shared-sticky-wpp>

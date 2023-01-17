@@ -1,0 +1,12 @@
+<h2 *ngIf="showName" class="footer__title">Pousada Doce Recanto</h2>
+
+<ul class="list-footer">
+    <a *ngFor="let item of linkList" [href]="item.link" target="_blank" class="list-footer__item list-footer__link">
+        <li class="list-footer__item">
+            <img class="list-footer__image" [src]="item.image" [alt]="item.description" [width]="item.width"
+                [height]="item.height">
+        </li>
+    </a>
+</ul>
+
+<span class="footer__developer"><b>©</b> Desenvolvido por Eder Maciel</span>

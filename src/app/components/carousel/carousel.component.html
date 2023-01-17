@@ -1,0 +1,121 @@
+<!-- CARROSSEL SECTION -->
+<section class="carrossel">
+    <div class="carrossel__container">
+        <swiper #swiper [config]="config" [spaceBetween]="25" (slideChange)="onSlideChange()">
+            <ng-container *ngFor="let banner of bannerCarouselList">
+                <ng-template swiperSlide>
+                    <div class="swiper-slide"><img [src]="banner" alt=""></div>
+                </ng-template>
+            </ng-container>
+        </swiper>
+    </div>
+</section>
+<!-- END CARROSSEL SECTION -->
+
+<!-- NOSSA HISTORIA SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Nossa História</h2>
+    <div class="carrossel__container">
+        <div class="card">
+            <div class="card__descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">{{ historyInfo.title }}</h3>
+                    <h2 class="descricao__titulo-livro">{{ historyInfo.subTitle }}</h2>
+                    <p class="descricao__texto"> {{ historyInfo.description }} </p>
+                </div>
+                <img [src]="historyInfo.image" class="descricao__imagem-historia" alt="Pousada doce recanto">
+            </div>
+
+            <div class="card__botoes">
+                <ul class="botoes">
+                    <li class="botoes__item"><img (click)="loveClick($event)" src="assets/images/heart-black.png"
+                            width="50px" height="50px" alt="Amei"></li>
+                    <li class="contador__likes">
+                        <p>{{loveCounter}}</p>
+                    </li>
+                </ul>
+                <a [routerLink]="'sobre-nos'" class="botoes__ancora">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END NOSSA HISTORIA SECTION -->
+
+<!-- VENHA NOS CONHECER! SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Venha nos conhecer!</h2>
+    <div class="carrossel__container">
+        <div class="card">
+            <div *ngFor="let item of secondSectionList" [class]="item.class">
+                <img *ngIf="item.subTitle === 'Churrasqueira'" [src]="item.image"
+                    class="descricao__imagem-churrasqueira" [alt]="item.subTitle">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">{{ item.title }}</h3>
+                    <h2 class="descricao__titulo-livro">{{ item.subTitle }}</h2>
+                    <p class="descricao__texto-conhecer"> {{ item.description }} </p>
+                    <div class="descricao__horario-uso"
+                        [ngStyle]="{justifyContent: (item.subTitle === 'Churrasqueira') ? 'end' : 'start'}">
+                        <img [src]="item.imageClock" alt="Horarios de uso" width="30px" height="30px">
+                        <p>{{ item.horarioUso }}</p>
+                    </div>
+                    <div class="descricao__dias-uso"
+                        [ngStyle]="{justifyContent: (item.subTitle === 'Churrasqueira') ? 'end' : 'flex'}">
+                        <img [src]="item.imageClock" alt="Dias de uso" width="30px" height="30px">
+                        <p>{{ item.diasUso }}</p>
+                    </div>
+                </div>
+                <img *ngIf="item.subTitle !== 'Churrasqueira'" [src]="item.image" class="descricao__imagem"
+                    [alt]="item.subTitle">
+            </div>
+            <div class="card__botoes" style="justify-content: right !important;">
+                <a [routerLink]="'acomodacao'" class="botoes__ancora-lazer">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END VENHA NOS CONHECER! SECTION -->
+
+<!-- FEEDBACK SECTION -->
+<section class="carrossel">
+    <h2 class="carrossel__titulo">Seu feedback importa! ♥</h2>
+    <div class="carrossel__container">
+        <swiper #swiper2 [config]="configFeedback" [spaceBetween]="50" (slideChange)="onSlideChange()"
+            [pagination]="{clickable:true}">
+            <ng-container *ngFor="let feedback of feedbackList">
+                <ng-template swiperSlide>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <!-- STARS -->
+                            <div class="card__estrelas">
+                                <img *ngFor="let star of stars" src="assets/images/star.svg" alt="Star">
+                            </div>
+                            <!-- END STARS  -->
+                            <div class="card__descricao">
+                                <div class="descricao__container-feedback">
+                                    <h3 class="descricao__titulo">{{ feedback.title }}</h3>
+                                    <h2 class="descricao__titulo-livro">{{ feedback.subTitle }}</h2>
+                                    <p class="descricao__feedback"> {{ feedback.description }} </p>
+                                </div>
+                                <img [src]="feedback.image" class="descricao__feedback__images"
+                                    [alt]="feedback.subTitle">
+                            </div>
+
+                            <!-- BUTTON ROW -->
+                            <div class="card__botoes">
+                                <ul class="botoes">
+                                    <li [routerLink]="'/reserva'" class="botoes__item"><img [routerLink]="'/reserva'"
+                                            src="assets/images/calendar.png" alt="Agendar Diária" width="50px"
+                                            height="50px">
+                                    </li>
+                                </ul>
+                                <a [routerLink]="'/reserva'" class="botoes__ancora__feedback">Reserve Já</a>
+                            </div>
+                            <!-- END BUTTON ROW -->
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </swiper>
+    </div>
+</section>
+<!-- END FEEDBACK SECTION -->

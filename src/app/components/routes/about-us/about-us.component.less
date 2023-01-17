@@ -1,0 +1,149 @@
+ .image__header {
+     width : 100%;
+     height: auto;
+ }
+
+ .list__wrapper {
+     display        : flex;
+     flex-wrap      : wrap;
+     justify-content: center;
+ }
+
+ .list__item {
+     text-align: center;
+     margin    : 1em;
+ }
+
+ .list__title {
+     color      : var(--verde);
+     font-size  : 18px;
+     font-weight: 700;
+     padding    : .5em 0 .3em 0;
+     margin     : 0;
+ }
+
+ .list__paragraph {
+     font-size         : 14px;
+     text-overflow     : ellipsis;
+     overflow          : hidden;
+     display           : -webkit-box !important;
+     -webkit-line-clamp: 8;
+     -webkit-box-orient: vertical;
+     white-space       : normal;
+     text-align        : justify;
+     text-align        : center;
+ }
+
+ .list__ancor {
+     background-color: var(--verde);
+     padding         : .6em 4em;
+     margin          : .7em 0;
+     color           : var(--branco);
+     font-weight     : 700;
+     text-decoration : none;
+     border-radius   : 7px;
+ }
+
+ .list__ancor:hover {
+     opacity: 0.8;
+ }
+
+ .about-us__title {
+     color           : var(--branco);
+     background-color: var(--verde);
+     text-align      : center;
+     text-transform  : uppercase;
+     font-weight     : 700;
+     margin-top      : -.5em;
+     padding         : .5em 0 0.6em 0;
+     font-size       : 18px;
+ }
+
+ .card__about-us {
+     background   : var(--branco);
+     box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 10px;
+     margin       : .5em 1em 1em 1em;
+     padding      : 1em;
+ }
+
+ .card__description {
+     display        : flex;
+     justify-content: space-between;
+     margin-bottom  : .5em;
+     text-align     : center;
+ }
+
+ .description__title {
+     color        : var(--laranja);
+     font-weight  : 700;
+     padding      : 0;
+     margin-bottom: -15px;
+ }
+
+ .description__title-pousada {
+     color      : var(--verde);
+     font-size  : 18px;
+     font-weight: 700;
+     padding    : .5em 0 .3em 0;
+     margin     : 0;
+ }
+
+ .description__text {
+     font-size  : 14px;
+     white-space: normal;
+     text-align : justify;
+ }
+
+
+ @media screen and (min-width: 1024px) {
+     .description__title {
+         font-size: 18px;
+     }
+
+     .description__title-pousada {
+         font-size: 22px;
+         margin   : .5em;
+     }
+
+     .description__text {
+         font-size: 18px;
+     }
+
+     .about-us__title {
+         font-size: 25px;
+     }
+
+     .list__item {
+         display  : inline-block;
+         flex-grow: 1;
+         width    : calc(100% * (1/4) - 10px - 1px);
+     }
+
+     .card__about-us {
+         width : 94%;
+         margin: .5em auto 3em auto;
+     }
+
+ }
+
+ @media screen and (min-width:1366px) {
+     .description__title {
+         font-size: 32px;
+     }
+
+     .about-us__container {
+         display    : flex;
+         align-items: center;
+     }
+
+     .description {
+         margin-right: .5em;
+         width       : 100%;
+     }
+
+     .card__about-us {
+         width      : 92%;
+         margin-left: 3em;
+     }
+ }
