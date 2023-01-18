@@ -1,11 +1,11 @@
 <!-- Left container -->
 <div class="container">
     <input type="checkbox" id="menu" class="container__button">
-    <label for="menu" class="container__label">
-        <span class="header__menu-hamburguer container__image"></span>
+    <label #containerLabel for="menu" class="container__label">
+        <span (click)="openMenu()" class="header__menu-hamburguer container__image"></span>
     </label>
     <!-- MENU MOBILE -->
-    <ul class="list-menu">
+    <ul #listMenuMobile class="list-menu close-menu">
         <li class="list-menu__title">Seja Bem-Vindo</li>
         <hr />
         <li *ngFor="let item of listMenu" class="list-menu__item">
@@ -31,7 +31,7 @@
 <!-- END MENU DESKTOP/TABLET -->
 
 <!-- Right container -->
-<div class="container">
+<div (click)="onClick($event)" class="container">
     <a [routerLink]="'/reserva'" class="container__link">
         <img src="assets/images/calendar.png" alt="Confira nossa agenda" width="30px" height="30px"
             class="container__image">

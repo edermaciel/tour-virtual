@@ -12,14 +12,6 @@ hr {
     display            : inline-block;
 }
 
-.container__button:checked~.container__label>.header__menu-hamburguer {
-    background-image: url("/assets/images/menu-aberto.svg");
-}
-
-.container__button:checked~.container__label {
-    background: var(--laranja);
-}
-
 .container {
     display    : flex;
     align-items: center;
@@ -43,9 +35,16 @@ hr {
     border-radius: 10px;
 }
 
-.container__button:checked~.list-menu {
-    display  : block;
-    animation: 1s openMenu;
+.open-menu {
+    background-repeat  : no-repeat;
+    background-position: center;
+    display            : block;
+    animation          : 1s openMenu;
+    z-index            : 9999;
+}
+
+.close-menu {
+    background-image: url("/assets/images/menu.svg");
 }
 
 @keyframes openMenu {
