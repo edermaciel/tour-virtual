@@ -10,17 +10,17 @@ export class ToursComponent implements OnInit {
   listItems: any[] = [
     {
       title: "Turismo Cultural",
-      content: "O Circuito das Águas é patrimônio da Cultura Mineira. Tradições, gastronomia diversificada, artesanato variado. O cenário cultural da região é extremamente convidativo, inclusive para o turismo de estudos e intecâmbios, valorizando e promovendo os bens mateiais da cultura.",
+      content: "O Circuito das Águas é patrimônio da Cultura Mineira. Tradições, gastronomia diversificada, artesanato variado. O cenário cultural da região é extremamente convidativo, inclusive para o turismo de estudos e intercâmbios, valorizando e promovendo os bens materiais da cultura.",
       image: 'assets/images/cultura-icone.png'
     },
     {
       title: 'Turismo Rural',
-      content: 'Um conjunto de atividades turísticas desenvolvidas no meio rural, comprometido com a produção agropecuaária, agregando valor a produtos e serviços, resgatando e promovendo o patrimônio cultural e natural da comunidade, atendendo também pelo chamado Agroturismo.',
+      content: 'Um conjunto de atividades turísticas desenvolvidas no meio rural, comprometido com a produção agropecuária, agregando valor a produtos e serviços, resgatando e promovendo o patrimônio cultural e natural da comunidade, atendendo também pelo chamado Agroturismo.',
       image: 'assets/images/turismo-rural-icone.png'
     },
     {
       title: 'Turismo Histórico',
-      content: 'O Cirtcuito da Águas é parte do berço histórico de Minas Gerais, rico em lembranças e causos, explore o circuito. Surpeenda-se com o Turismo de Experiência, Conheça nossos patrimônios Históricos, viage pela Estrada Real. Explore toda a História deste Circuito.',
+      content: 'O Circuito da Águas é parte do berço histórico de Minas Gerais, rico em lembranças e causos, explore o circuito. Surpreenda-se com o Turismo de Experiência, Conheça nossos patrimônios Históricos, viagem pela Estrada Real. Explore toda a História deste Circuito.',
       image: 'assets/images/historia-icone.png'
     },
     {
