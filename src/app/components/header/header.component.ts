@@ -13,11 +13,10 @@ export class HeaderComponent implements OnInit {
   @ViewChild('containerLabel') containerLabel!: ElementRef<HTMLLabelElement>;
 
   listMenu: any[] = [
+    { title: 'Tour Virtual', link: '/tour' },
+    { title: 'Recursos', link: '/recursos' },
+    { title: 'Preços', link: '/precos' },
     { title: 'Contato', link: '/contato' },
-    { title: 'Acomodações', link: '/acomodacao' },
-    { title: 'Localização', link: '/localizacao' },
-    { title: 'Passeios', link: '/passeios' },
-    { title: 'Sobre Nós', link: '/sobre-nos' },
   ];
 
   constructor(private _eref: ElementRef) { }
@@ -37,7 +36,7 @@ export class HeaderComponent implements OnInit {
       this.listMenuMobile!.nativeElement.classList.replace('open-menu', 'close-menu');
       this.containerLabel!.nativeElement.style.background = '#FFFFFF';
     } else {
-      this.containerLabel!.nativeElement.style.background = '#EB9800';
+      this.containerLabel!.nativeElement.style.background = '#8BAEA7';
       this.listMenuMobile!.nativeElement.classList.replace('close-menu', 'open-menu');
     }
   }

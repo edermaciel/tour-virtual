@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "doce-recanto": {
+    "tour-virtual": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
             "allowedCommonJsDependencies": [
               "leaflet"
             ],
-            "outputPath": "dist/doce-recanto",
+            "outputPath": "dist/tour-virtual",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "doce-recanto:build:production"
+              "browserTarget": "tour-virtual:build:production"
             },
             "development": {
-              "browserTarget": "doce-recanto:build:development"
+              "browserTarget": "tour-virtual:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "doce-recanto:build"
+            "browserTarget": "tour-virtual:build"
           }
         },
         "test": {

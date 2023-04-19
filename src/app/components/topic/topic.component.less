@@ -1,39 +1,87 @@
-.topics__title {
-    color      : var(--branco);
-    font-weight: 300;
-    margin     : 1em 0;
+.card {
+    border       : 1px solid #ddd;
+    border-radius: 10px;
+    max-width    : 500px;
+    margin       : -10px 0 0 0;
+    overflow     : hidden;
 }
 
-.topics__list {
+.top {
+    background-color   : #fff;
+    padding            : 10px 30px;
+    background-size    : cover;
+    background-position: center center;
+    background-repeat  : no-repeat;
+    position           : relative;
+}
+
+.immersive-image {
+    width     : 80px;
+    height    : 80px;
+    margin-top: 25px;
+}
+
+.separator-topics {
+    border       : solid 2px;
+    border-radius: 40px;
+    margin       : 25px 0;
+}
+
+.choose-immersive {
+    font-size  : 30px;
+    line-height: 40px;
+    text-align : left !important;
+}
+
+.image-container {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    bottom  : 0;
+    overflow: hidden;
+}
+
+.image-container img {
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+}
+
+.white-container {
+    position: relative;
+    z-index : 1;
+}
+
+.row {
     display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom  : 20px;
 }
 
-.topics__item {
-    margin: 2em 0.5em;
+.topic {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
 }
 
-.topics__link {
-    color          : var(--branco);
-    padding        : 1em;
-    background     : var(--laranja-degrade);
-    text-decoration: none;
-    font-size      : 14px;
-    font-weight    : 700;
-    border-radius  : 10px;
+.topic-icon {
+    background-color: #F19A33;
+    border-radius   : 50%;
+    padding         : 45px;
+    margin-bottom   : 10px;
 }
 
-.topics__link:hover {
-    opacity: 0.8;
+.topic-icon i {
+    font-size: 24px;
 }
 
-@media screen and (min-width:1024px) {
-    .topics__title {
-        font-size: 24px;
-    }
+.topic-title {
+    text-align: center;
+}
 
-    .topics__link {
-        font-size: 24px;
-    }
+.bottom {
+    background-color: #007bff;
+    padding         : 20px;
+    color           : #fff;
 }

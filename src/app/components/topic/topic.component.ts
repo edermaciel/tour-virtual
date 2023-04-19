@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopicComponent implements OnInit {
   topicsList: any[] = [
-    { link: 'acomodacao', name: 'Acomodações' },
-    { link: 'passeios', name: 'Passeios' },
-    { link: 'sobre-nos', name: 'Área de lazer' },
+    { link: 'tour', name: 'Tour Virtual' },
+    { link: 'recursos', name: 'Recursos' },
+    { link: 'precos', name: 'Preços' },
     { link: 'contato', name: 'Contato' },
-    { link: 'localizacao', name: 'Localização' }
   ]
+
   constructor() { }
 
   ngOnInit(): void {

@@ -8,24 +8,20 @@ export const routes: Routes = [
     loadChildren: () => import('./components/routes/about-us/about-us.module').then(m => m.AboutRouteModule)
   },
   {
-    path: 'acomodacao',
-    loadChildren: () => import('./components/routes/accomodation').then(m => m.AccomodationRouteModule)
+    path: 'tour',
+    loadChildren: () => import('./components/routes/tour').then(m => m.TourRouteModule)
   },
   {
     path: 'contato',
     loadChildren: () => import('./components/routes/contact').then(m => m.ContactRouteModule)
   },
   {
-    path: 'localizacao',
-    loadChildren: () => import('./components/routes/localization').then(m => m.LocalizationRouteModule)
+    path: 'recursos',
+    loadChildren: () => import('./components/routes/recursos').then(m => m.RecursosRouteModule)
   },
   {
-    path: 'reserva',
-    loadChildren: () => import('./components/routes/reservation').then(m => m.ReservationRouteModule)
-  },
-  {
-    path: 'passeios',
-    loadChildren: () => import('./components/routes/tours').then(m => m.ToursModule)
+    path: 'precos',
+    loadChildren: () => import('./components/routes/precos').then(m => m.PrecosRouteModule)
   },
   {
     path: '',

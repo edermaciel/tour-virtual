@@ -1,0 +1,182 @@
+hr {
+    margin: 0;
+}
+
+.image__header {
+    width : 100%;
+    height: auto;
+}
+
+.accomodation__title {
+    color           : var(--branco);
+    background-color: var(--verde);
+    text-align      : center;
+    text-transform  : uppercase;
+    font-weight     : 700;
+    margin-top      : -.5em;
+    padding         : .5em 0 0.6em 0;
+    font-size       : 18px;
+}
+
+.wrapper {
+    background-color: var(--branco);
+    padding         : 1em;
+    display         : flex;
+    justify-content : space-around;
+    flex-wrap       : wrap;
+}
+
+
+.swiper {
+    width : 60%;
+    margin: 0;
+    height: 17em;
+
+    .swiper-pagination {
+        bottom: -6px !important;
+    }
+
+    img {
+        width        : 285px !important;
+        border-radius: 24px;
+    }
+}
+
+.botoes__ancora__reserve {
+    background-color: var(--verde);
+    padding         : 1em 2em;
+    margin          : .7em 0;
+    color           : var(--branco);
+    font-weight     : 700;
+    text-decoration : none;
+    border-radius   : 7px;
+    margin-top      : 1em;
+}
+
+.lista-rodape {
+    display: none;
+}
+
+.rodape__developer {
+    font-size: 12px;
+}
+
+.lista-rodape {
+    display: block;
+}
+
+.rodape__developer {
+    font-size: 14px;
+}
+
+.lista-rodape__item {
+    display    : flex;
+    align-items: center;
+    margin     : 1em 0;
+}
+
+.lista-rodape__link {
+    color          : var(--cinza);
+    text-decoration: none;
+    margin-left    : .6em;
+}
+
+.lista-rodape__titulo {
+    color      : var(--verde);
+    font-weight: 500;
+    font-size  : 14px;
+}
+
+.rodape__titulo {
+    font-size: 24px;
+}
+
+
+@media screen and (min-width:1024px) {
+    .wrapper {
+        padding: 3em 0;
+    }
+
+    .lista-rodape {
+        width    : 17%;
+        font-size: 16px;
+    }
+
+    .lista-rodape__titulo {
+        font-size : 24px;
+        margin-top: 1em;
+    }
+
+    .swiper {
+        width     : 75%;
+        max-height: 100%;
+        height    : 40em;
+        margin    : 0;
+
+        .swiper-pagination {
+            width: 100%;
+        }
+
+        img {
+            width: 100% !important;
+        }
+    }
+
+    .botoes__ancora__reserve {
+        padding   : 1em 2em;
+        transition: transform 0.5s ease;
+        transform : scale(1);
+    }
+
+    .botoes__ancora__reserve:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .accomodation__title {
+        font-size  : 28px;
+        padding-top: 0.8em;
+    }
+
+    .botoes__ancora__reserve {
+        margin-top: 1em;
+        padding   : 1em 2em;
+    }
+
+    .lista-rodape__titulo {
+        font-size: 28px;
+
+    }
+
+    .lista-rodape__item {
+        font-size: 25px;
+    }
+
+    .swiper {
+        height: 48em;
+        width : 70%;
+
+        img {
+            width: 100% !important;
+        }
+    }
+
+    .lista-rodape__link {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width:1728px) {
+    .lista-rodape__titulo {
+        font-size: 32px;
+    }
+
+    .swiper {
+        height: 65em;
+    }
+
+    .wrapper {
+        padding: 3em 0;
+    }
+}

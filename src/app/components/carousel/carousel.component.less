@@ -1,5 +1,6 @@
 .carrossel__titulo {
-    color           : var(--laranja);
+    margin-top      : 15px !important;
+    color           : var(--azul);
     background-color: var(--branco);
     text-align      : center;
     text-transform  : uppercase;
@@ -43,9 +44,9 @@
 }
 
 .card__descricao {
-    display        : flex;
-    justify-content: space-between;
-    margin-bottom  : .5em;
+    display      : inline-block;
+    margin-bottom: .5em;
+    text-align   : center;
 }
 
 .card__descricao-churrasqueira {
@@ -65,8 +66,7 @@
 
 .card__botoes {
     display        : flex;
-    justify-content: space-between;
-    align-items    : flex-end;
+    justify-content: center;
 }
 
 .botoes {
@@ -75,7 +75,7 @@
 }
 
 .descricao__titulo {
-    color        : var(--laranja);
+    color        : var(--azul);
     font-weight  : 700;
     padding      : 0;
     margin-bottom: -15px;
@@ -133,8 +133,8 @@
 }
 
 .botoes__ancora {
-    background-color: var(--laranja);
-    padding         : 1em 4em;
+    background-color: var(--azul);
+    padding         : 1em 8em;
     margin          : .7em 0;
     color           : var(--branco);
     font-weight     : 700;
@@ -186,6 +186,7 @@
     display      : inherit;
     align-self   : flex-end;
     height       : 182px;
+    width        : 51%;
     border-radius: 10px;
     margin-left  : .5em;
 }
@@ -212,6 +213,11 @@
 
 .botao__reservar {
     display: block;
+}
+
+.video-tour {
+    width        : 100% !important;
+    border-radius: 5px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -251,6 +257,7 @@
     }
 
     .card__descricao-churrasqueira {
+
         .descricao__horario-uso p {
             margin       : 0;
             padding-right: .3em;
@@ -430,7 +437,7 @@
     }
 
     .descricao__titulo {
-        color        : var(--laranja);
+        color        : var(--azul);
         font-weight  : 700;
         padding      : 0;
         margin-bottom: -10px;

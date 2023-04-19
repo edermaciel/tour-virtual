@@ -16,12 +16,12 @@
         </li>
     </ul>
     <!-- END MENU MOBILE -->
-    <img [routerLink]="''" src="assets/images/logo-pousada.png" alt="Logo Pousada" class="imagem__logo">
-    <h1 [routerLink]="''" class="container__title"><b class="container__title--negrito">Doce</b>Recanto</h1>
+    <img [routerLink]="''" src="assets/images/logo-tour.png" alt="Logo Tour Virtual" class="imagem__logo">
+    <h1 [routerLink]="''" class="container__title"><b class="container__title--negrito">IMMERSIVE</b></h1>
 </div>
 
 <!-- MENU DESKTOP/TABLET -->
-<ul class="options">
+<ul class="options" style="margin-left:-7em">
     <ng-container *ngFor="let item of listMenu">
         <a [routerLink]="item.link" class="options__link">
             <li class="options__item">{{item.title}}</li>
@@ -32,13 +32,7 @@
 
 <!-- Right container -->
 <div (click)="onClick($event)" class="container">
-    <a [routerLink]="'/reserva'" class="container__link">
-        <img src="assets/images/calendar.png" alt="Confira nossa agenda" width="30px" height="30px"
-            class="container__image">
-        <p class="container__texto">Agenda</p>
-    </a>
-
-    <a href="https://wa.me/5535991304000?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Pousada%20Doce%20Recanto,%20você%20pode%20me%20ajudar?%20Agradeço desde já!%20:)"
+    <a href="https://wa.me/5535988679369?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20seu%20serviço,%20%20você%20pode%20me%20ajudar?%20Agradeço desde já!%20:)"
         target="_blank" class="container__link">
         <img src="assets/images/e-mail.png" width="36px" height="36px" alt="Contato" class="container__image">
         <p class="container__texto">Contato</p>

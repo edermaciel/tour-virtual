@@ -1,9 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 
-import SwiperCore, { A11y, Autoplay, EffectFade, Navigation, Pagination, Scrollbar } from 'swiper';
-import { SwiperComponent } from 'swiper/angular';
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
 
 @Component({
   selector: 'app-carousel',
@@ -11,18 +8,10 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
   styleUrls: ['./carousel.component.less']
 })
 export class CarouselComponent implements OnInit, AfterViewInit {
-  @ViewChild('swiper', { static: false }) swiper!: SwiperComponent;
-  @ViewChild('swiper2', { static: false }) swiper2!: SwiperComponent;
-  config: any = {};
-  configFeedback: any = {};
-  loveCounter = 189;
-
-  bannerCarouselList: string[] = ['assets/images/banner_01.png', 'assets/images/banner_02.png', 'assets/images/banner_03.png'];
 
   historyInfo = {
-    title: 'Soledade de Minas',
-    subTitle: 'Doce Recanto',
-    description: 'A Pousada Doce Recanto é mais do que apenas uma propriedade localizada na cidade de Soledade de Minas. É um lugar onde a natureza exuberante se une à história e à herança de uma família. A propriedade, passada de geração em geração, herdada do Sr. Justo Maciel, o patriarca da família, é cercada por uma fauna e flora rica e abundante. Os hóspedes podem desfrutar de passeios ao bosque, onde é possível apreciar a diversidade de espécies de plantas e animais, além de um passeio no apiário, onde os hóspedes podem conhecer o mundo das abelhas e seus produtos. Para os amantes de cavalos, a pousada oferece também passeios a cavalo, onde é possível explorar a bela paisagem da propriedade. A Pousada Doce Recanto é o lugar perfeito para aqueles que buscam tranquilidade, contato com a natureza e uma ligação com a história e a herança de uma família. E para aqueles que desejam conhecer as principais estâncias hidrominerais, São Lourenço e Caxambú.',
+    title: 'Tour Virtual 360º',
+    description: 'Uma descrição sobre o que é o tour virtual aqui',
     image: 'assets/images/nossa-historia.png'
   };
 
@@ -45,60 +34,6 @@ export class CarouselComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.config = {
-      fadeEffect: { crossFade: true },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      effect: 'fade',
-      slidesPerView: 1
-    }
 
-    this.configFeedback = {
-      fadeEffect: { crossFade: true },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      effect: 'fade',
-      slidesPerView: 1
-    }
-
-    setTimeout(() => {
-      // Start autoplay
-      this.swiper.swiperRef.fadeEffect = true;
-      this.swiper.swiperRef.autoplay.start();
-
-      this.swiper2.swiperRef.fadeEffect = true;
-      this.swiper2.swiperRef.autoplay.start();
-    }, 1000);
   }
-
-  loveClick(event: Event): void {
-    const blackHeart = 'assets/images/heart-black.png';
-    const redHeart = 'assets/images/heart-red.png';
-
-    if ((<HTMLImageElement>event.target).src.includes('black')) {
-      (<HTMLImageElement>event.target).src = (<HTMLImageElement>event.target).src.replace(blackHeart, redHeart)
-      this.loveCounter++;
-    } else {
-      (<HTMLImageElement>event.target).src = (<HTMLImageElement>event.target).src.replace(redHeart, blackHeart)
-      this.loveCounter--;
-    }
-  }
-
-  onSlideChange() {
-    setTimeout(() => {
-      if (this.swiper.swiperRef.autoplay) {
-        this.swiper.swiperRef.fadeEffect = true;
-        this.swiper.swiperRef.autoplay.start();
-      }
-      if (this.swiper2.swiperRef.autoplay) {
-        this.swiper2.swiperRef.fadeEffect = true;
-        this.swiper2.swiperRef.autoplay.start();
-      }
-    }, 1000);
-  }
-
 }
