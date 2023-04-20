@@ -7,42 +7,48 @@ import { environment } from 'src/environments/environment.prod';
   templateUrl: './recursos.component.html',
   styleUrls: ['./recursos.component.less']
 })
-export class RecursosComponent implements OnInit, AfterViewInit {
-  map: any;
+export class RecursosComponent implements OnInit {
+  listItems: any[] = [
+    {
+      title: "Alcance e Visibilidade",
+      content: "Você aumentará seu alcance devido a tal e tal coisa",
+      image: 'assets/images/topics/topic-2.png'
+    },
+    {
+      title: 'Redução de Custos',
+      content: 'Você irá reduzir custos devido a tal e tal coisa',
+      image: 'assets/images/topics/topic-2.png'
+    },
+    {
+      title: 'Confiança e Credibilidade',
+      content: 'Você irá aumentar a credibilidade devido a tal e tal coisa',
+      image: 'assets/images/topics/topic-3.png'
+    },
+    {
+      title: 'Experiência do Cliente',
+      content: 'Você irá melhorar a experiência do cliente devido a tal e tal coisa',
+      image: 'assets/images/topics/topic-4.png'
+    },
+    {
+      title: 'Acesso a qualquer momento',
+      content: 'Além de tudo, você poderá ter acesso a qualquer momento!',
+      image: 'assets/images/topics/topic-5.png'
+    },
+    {
+      title: 'Diferencial Competitivo',
+      content: 'Você terá um diferencial perante aos concorrentes devido a tal e tal coisa',
+      image: 'assets/images/topics/topic-6.png'
+    },
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
     window.scrollTo(0, 0);
-  }
-
-  ngAfterViewInit(): void {
-    setTimeout(() => { this.loadMap(); }, 1000);
-  }
-
-  private loadMap(): void {
-    const center = new L.LatLng(-22.047632000931056, -45.04335902862759);
-
-    this.map = L.map('map').setView([0, 0], 1);
-    L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${environment.mapbox.accessToken}`, {
-      maxZoom: 18,
-      id: 'mapbox/streets-v11',
-      tileSize: 512,
-      zoomOffset: -1,
-      accessToken: environment.mapbox.accessToken,
-    }).addTo(this.map);
-
-    this.map.flyTo(center, 13);
-
-    const icon = L.icon({
-      iconUrl: 'assets/images/marker-icon.png',
-      shadowUrl: 'assets/images/marker-shadow.png',
-      popupAnchor: [13, 0],
-    });
-
-    const marker = L.marker(center, { icon }).bindPopup('Rua Justo Antonio Maciel - nº 0');
-    marker.addTo(this.map);
-    this.map.attributionControl.setPrefix('');
+    setTimeout(() => {
+      let btn = document.getElementById('tours-sticky-btn') as HTMLElement;
+      if (btn) btn.classList.add('fade-in');
+    }, 2500);
   }
 
 }

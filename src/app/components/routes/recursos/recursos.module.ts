@@ -6,6 +6,7 @@ import { RecursosComponent } from './recursos.component';
 import { RecursosRoutingModule } from './recursos-routing.module';
 import { HeaderModule } from '../../header';
 import { FooterModule } from '../../footer';
+import { StickyWppModule } from 'src/app/shared/sticky-wpp';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterModule } from '../../footer';
     RouterModule,
     RecursosRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    StickyWppModule
   ]
 })
 export class RecursosRouteModule { }

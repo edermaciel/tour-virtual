@@ -1,15 +1,28 @@
 <app-header class="header"></app-header>
 
-<!-- LOCALIZAÇÃO DA POUSADA -->
+<!-- BENEFÍCIOS -->
 <section class="localization">
-    <h2 class="localization__title">Localização da pousada!</h2>
+    <h2 class="localization__title">Benefícios</h2>
     <div class="localization__container">
         <div class="card__localization">
-            <div style="z-index: 1;" id="map"> </div>
+            <div class="card__description">
+                <div class="description">
+                    <ul class="list__wrapper">
+                        <li class="list__item" *ngFor="let item of listItems">
+                            <div class="topic-icon">
+                                <img [src]="item.image" [alt]="item.title">
+                            </div>
+                            <h3 class="list__title">{{ item.title }}</h3>
+                            <p class="list__paragraph">{{ item.content }}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- END LOCALIZAÇÃO DA POUSADA -->
+<!-- END BENEFÍCIOS -->
 
 <hr style="margin: 0; padding: 0; " />
 <app-footer class="footer"></app-footer>
+<shared-sticky-wpp id="tours-sticky-btn" class="whatsapp-effect"></shared-sticky-wpp>

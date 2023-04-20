@@ -10,8 +10,8 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
   styleUrls: ['./tour.component.less']
 })
 export class TourComponent implements OnInit, AfterViewInit {
-  @ViewChild('swiper2', { static: false }) swiper2!: SwiperComponent;
-  configFeedback: any = {};
+  // @ViewChild('swiper2', { static: false }) swiper2!: SwiperComponent;
+  // configFeedback: any = {};
   stars = new Array(5);
   roomList: any[] = [
     { image: 'assets/images/accomodation/quarto-1.jpeg' },
@@ -26,11 +26,11 @@ export class TourComponent implements OnInit, AfterViewInit {
   ];
 
   includedList: any[] = [
-    { title: 'Cama de Casal' },
-    { title: 'Cama de Solteiro' },
-    { title: 'Frigobar' },
-    { title: 'TV' },
-    { title: 'Cooktop' },
+    { title: 'Imersão' },
+    { title: 'Compreensão' },
+    { title: 'Interatividade' },
+    { title: 'Conveniência' },
+    { title: 'Aprendizado' },
   ];
 
   constructor() { }
@@ -45,28 +45,28 @@ export class TourComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    this.configFeedback = {
-      fadeEffect: { crossFade: true },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      effect: 'fade',
-      slidesPerView: 1
-    }
+    // this.configFeedback = {
+    //   fadeEffect: { crossFade: true },
+    //   autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    //   },
+    //   effect: 'fade',
+    //   slidesPerView: 1
+    // }
 
-    setTimeout(() => {
-      this.swiper2.swiperRef.fadeEffect = true;
-      this.swiper2.swiperRef.autoplay.start();
-    }, 1000);
+    // setTimeout(() => {
+    //   this.swiper2.swiperRef.fadeEffect = true;
+    //   this.swiper2.swiperRef.autoplay.start();
+    // }, 1000);
   }
 
-  onSlideChange() {
-    setTimeout(() => {
-      if (this.swiper2.swiperRef.autoplay) {
-        this.swiper2.swiperRef.fadeEffect = true;
-        this.swiper2.swiperRef.autoplay.start();
-      }
-    }, 1000);
-  }
+  // onSlideChange() {
+  //   setTimeout(() => {
+  //     if (this.swiper2.swiperRef.autoplay) {
+  //       this.swiper2.swiperRef.fadeEffect = true;
+  //       this.swiper2.swiperRef.autoplay.start();
+  //     }
+  //   }, 1000);
+  // }
 }
