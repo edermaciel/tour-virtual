@@ -20,10 +20,6 @@ export const routes: Routes = [
     loadChildren: () => import('./components/routes/recursos').then(m => m.RecursosRouteModule)
   },
   {
-    path: 'precos',
-    loadChildren: () => import('./components/routes/precos').then(m => m.PrecosRouteModule)
-  },
-  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',

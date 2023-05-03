@@ -7,27 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   contactObj = {
-    title: 'Pousada Doce Recanto',
-    subTitle: 'Reserve já sua estadia!',
-    description: `Se desejar esclarecer alguma dúvida ou saber maiores informações, entre em contato conosco da maneira que você preferir. Será um prazer ajudarmos você a conhecer o sul de minas e tornar sua estadia inesquecível!`,
+    title: 'Immersive',
+    subTitle: 'A Mudança Começa Agora!',
+    description: `Nosso objetivo é fornecer um serviço excepcional aos nossos clientes. Se você precisar de ajuda ou tiver alguma dúvida, entre em contato conosco e teremos o maior prazer em ajudá-lo(a).`,
   }
 
   ownerList: any[] = [
     {
       ownerStatus: 'Proprietário',
-      ownerEmail: 'emersonmacielefm@yahoo.com.br',
-      ownerName: 'Emerson',
-      ownerNumber: '(35) 99130-4000',
-      ownerImage: 'assets/images/owners/emerson.jpg',
-      ownerLink: 'https://wa.me/5535991304000?text=Olá,%20Emerson!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Pousada%20Doce%20Recanto,%20você%20pode%20me%20ajudar?%20Agradeço desde já!%20:)'
-    },
-    {
-      ownerStatus: 'Sócio Proprietário',
-      ownerEmail: '200otavio@gmail.com',
-      ownerName: 'Otavio',
-      ownerNumber: '(35) 98436-0898',
-      ownerImage: 'assets/images/owners/otavio.jpg',
-      ownerLink: 'https://wa.me/5535984360898?text=Olá,%20Otávio!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Pousada%20Doce%20Recanto,%20você%20pode%20me%20ajudar?%20Agradeço desde já!%20:)'
+      ownerEmail: 'immersive@gmail.com',
+      ownerName: 'Gabriel Toledo',
+      ownerNumber: '(35) 98867-9369',
+      ownerImage: 'assets/images/owners/gabriel.jpg',
+      ownerLink: 'https://wa.me/5535988679369?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20de%20seu%20serviço,%20%20você%20pode%20me%20ajudar?%20Agradeço desde já!%20:)'
     }
   ]
 

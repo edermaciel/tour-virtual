@@ -40,6 +40,7 @@
     right   : 0;
     bottom  : 0;
     overflow: hidden;
+    opacity : 0.4;
 }
 
 .image-container img {
@@ -75,11 +76,31 @@
 
 
 .topic-title {
-    text-align: center;
+    text-align : center;
+    font-weight: 500;
 }
 
 .bottom {
     background-color: #5271FF;
     padding         : 20px;
     color           : #fff;
+}
+
+@media screen and (min-width: 1024px) {
+    .list__item {
+        display  : inline-block;
+        flex-grow: 1;
+        width    : calc(100% * (1/4) - 10px - 1px);
+    }
+
+    .card {
+        max-width      : 80%;
+        justify-content: center;
+        display        : flex;
+        margin         : 0 auto;
+    }
+
+    .topic-title {
+        font-size: 18px;
+    }
 }

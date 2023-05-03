@@ -82,6 +82,109 @@ hr {
     font-size: 24px;
 }
 
+.contact__title {
+    color           : var(--branco);
+    background-color: var(--azul);
+    text-align      : center;
+    text-transform  : uppercase;
+    font-weight     : 700;
+    padding         : .5em 0 0.6em 0;
+    font-size       : 18px;
+}
+
+.card__contact {
+    background   : var(--branco);
+    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin       : .5em 1em 1em 1em;
+    padding      : 1em;
+}
+
+.card__description {
+    display        : flex;
+    justify-content: space-between;
+    margin-bottom  : .5em;
+    text-align     : center;
+}
+
+.description__title {
+    color        : var(--azul);
+    font-weight  : 700;
+    padding      : 0;
+    margin-bottom: -15px;
+}
+
+.description__title-pousada {
+    color      : var(--azul);
+    font-size  : 18px;
+    font-weight: 700;
+    padding    : .5em 0 .3em 0;
+    margin     : 0;
+}
+
+.description__text {
+    font-size  : 14px;
+    white-space: normal;
+    text-align : justify;
+}
+
+.description-team {
+    text-align : right;
+    font-size  : 14px;
+    font-weight: 500;
+}
+
+.owner__description-text {
+    font-size      : 14px;
+    white-space    : normal;
+    text-align     : justify;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    text-decoration: underline;
+    color          : var(--azul);
+
+
+    img {
+        padding-right: 0.5em;
+    }
+}
+
+.owner__description-email {
+    font-size      : 14px;
+    white-space    : normal;
+    text-align     : justify;
+    display        : none;
+    align-items    : center;
+    justify-content: center;
+    text-decoration: underline;
+    color          : var(--azul);
+    cursor         : default;
+
+    img {
+        padding-right: 0.5em;
+    }
+}
+
+.owner__contact {
+    width: 100%;
+}
+
+.owner__list {
+    display        : flex;
+    justify-content: center;
+}
+
+.owner__image {
+    width        : 115px;
+    height       : 115px;
+    border-radius: 20em;
+}
+
+.owner__icon-image {
+    width: 15px;
+}
+
 
 @media screen and (min-width:1024px) {
     .wrapper {
@@ -98,21 +201,6 @@ hr {
         margin-top: 1em;
     }
 
-    .swiper {
-        width     : 75%;
-        max-height: 100%;
-        height    : 40em;
-        margin    : 0;
-
-        .swiper-pagination {
-            width: 100%;
-        }
-
-        img {
-            width: 100% !important;
-        }
-    }
-
     .botoes__ancora__reserve {
         padding   : 1em 2em;
         transition: transform 0.5s ease;
@@ -122,9 +210,43 @@ hr {
     .botoes__ancora__reserve:hover {
         transform: scale(1.1);
     }
+
+    .owner__description-email {
+        display: flex;
+    }
+
+    .owner__list {
+        justify-content: space-evenly;
+    }
+
+    .description__title {
+        font-size: 18px;
+    }
+
+    .description__title-pousada {
+        font-size: 22px;
+        margin   : .5em;
+    }
+
+    .description__text {
+        font-size: 18px;
+    }
+
+    .contact__title {
+        font-size: 25px;
+    }
+
+    .card__contact {
+        width : 80%;
+        margin: .5em auto 3em auto;
+    }
 }
 
 @media screen and (min-width:1366px) {
+    .tour {
+        height: 23em;
+    }
+
     .accomodation__title {
         font-size  : 28px;
         padding-top: 0.8em;
@@ -144,27 +266,29 @@ hr {
         font-size: 25px;
     }
 
-    .swiper {
-        height: 48em;
-        width : 70%;
-
-        img {
-            width: 100% !important;
-        }
-    }
 
     .lista-rodape__link {
         font-size: 24px;
+    }
+
+    .description__title {
+        font-size: 32px;
+    }
+
+    .contact__container {
+        display    : flex;
+        align-items: center;
+    }
+
+    .description {
+        margin-right: .5em;
+        width       : 100%;
     }
 }
 
 @media screen and (min-width:1728px) {
     .lista-rodape__titulo {
         font-size: 32px;
-    }
-
-    .swiper {
-        height: 65em;
     }
 
     .wrapper {

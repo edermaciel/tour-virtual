@@ -1,6 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-
-
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -10,9 +8,15 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 export class CarouselComponent implements OnInit, AfterViewInit {
 
   historyInfo = {
-    title: 'Tour Virtual 360º',
-    description: 'Uma descrição sobre o que é o tour virtual aqui',
-    image: 'assets/images/nossa-historia.png'
+    title: 'Tour Virtual',
+    subtitle: 'O que é?',
+    description: `A ferramenta IMMERSIVE, permite que você se mova por um determinado local como se estivesse realmente lá, proporcionando uma experiência única e 
+                  interativa que pode ser incrivelmente útil para uma variedade de propósitos.
+                  Isso pode ser especialmente útil se você estiver tentando navegar em uma área desconhecida ou quiser ter uma ideia melhor do que
+                  um local específico parece antes de chegar lá.
+                  Em geral, o IMMERSIVE é uma ferramenta poderosa e versátil que pode ser usada em uma variedade de contextos.
+                  Com seus recursos imersivos e interativos, permite explorar o mundo ao seu redor de maneiras novas e emocionantes 
+                  e pode ser um recurso incrivelmente útil para fins pessoais e profissionais.`,
   };
 
   secondSectionList: any[] = [

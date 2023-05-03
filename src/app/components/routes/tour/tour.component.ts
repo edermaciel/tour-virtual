@@ -9,9 +9,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
   templateUrl: './tour.component.html',
   styleUrls: ['./tour.component.less']
 })
-export class TourComponent implements OnInit, AfterViewInit {
-  // @ViewChild('swiper2', { static: false }) swiper2!: SwiperComponent;
-  // configFeedback: any = {};
+export class TourComponent implements OnInit {
   stars = new Array(5);
   roomList: any[] = [
     { image: 'assets/images/accomodation/quarto-1.jpeg' },
@@ -33,6 +31,17 @@ export class TourComponent implements OnInit, AfterViewInit {
     { title: 'Aprendizado' },
   ];
 
+  contactObj = {
+    subtitle: 'Immersive',
+    description: `A ferramenta IMMERSIVE, permite que você se mova por um determinado local como se estivesse realmente lá, proporcionando uma experiência única e 
+                  interativa que pode ser incrivelmente útil para uma variedade de propósitos.
+                  Isso pode ser especialmente útil se você estiver tentando navegar em uma área desconhecida ou quiser ter uma ideia melhor do que
+                  um local específico parece antes de chegar lá.
+                  Em geral, o IMMERSIVE é uma ferramenta poderosa e versátil que pode ser usada em uma variedade de contextos.
+                  Com seus recursos imersivos e interativos, permite explorar o mundo ao seu redor de maneiras novas e emocionantes 
+                  e pode ser um recurso incrivelmente útil para fins pessoais e profissionais.`,
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -42,31 +51,4 @@ export class TourComponent implements OnInit, AfterViewInit {
       if (btn) btn.classList.add('fade-in');
     }, 2500);
   }
-
-  ngAfterViewInit(): void {
-
-    // this.configFeedback = {
-    //   fadeEffect: { crossFade: true },
-    //   autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    //   },
-    //   effect: 'fade',
-    //   slidesPerView: 1
-    // }
-
-    // setTimeout(() => {
-    //   this.swiper2.swiperRef.fadeEffect = true;
-    //   this.swiper2.swiperRef.autoplay.start();
-    // }, 1000);
-  }
-
-  // onSlideChange() {
-  //   setTimeout(() => {
-  //     if (this.swiper2.swiperRef.autoplay) {
-  //       this.swiper2.swiperRef.fadeEffect = true;
-  //       this.swiper2.swiperRef.autoplay.start();
-  //     }
-  //   }, 1000);
-  // }
 }
