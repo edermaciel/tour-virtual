@@ -11,16 +11,16 @@ export class StickyWppComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.onscroll = function () {
-      if (window.innerHeight + window.scrollY + 800 >= document.body.offsetHeight) {
-        // display the button
-        (<HTMLElement>document.querySelector(".bottom-right-button")!).style.display = "block";
-        // fade in the button
-        (<HTMLElement>document.querySelector(".bottom-right-button")!).style.opacity = '1';
-      } else {
-        (<HTMLElement>document.querySelector(".bottom-right-button")!).style.opacity = '0';
-      }
-    };
+    // window.onscroll = function () {
+    //   if (window.innerHeight + window.scrollY + 800 >= document.body.offsetHeight) {
+    //     // display the button
+    //     (<HTMLElement>document.querySelector(".bottom-right-button")!).style.display = "block";
+    //     // fade in the button
+    //     (<HTMLElement>document.querySelector(".bottom-right-button")!).style.opacity = '1';
+    //   } else {
+    //     (<HTMLElement>document.querySelector(".bottom-right-button")!).style.opacity = '0';
+    //   }
+    // };
   }
 
   goTop(): void {

@@ -42,7 +42,6 @@ export class HeaderComponent implements OnInit {
       this.containerLabel!.nativeElement.style.background = '#FFFFFF';
       span.classList.replace('header__menu-hamburguer-open', 'header__menu-hamburguer');
     } else {
-      console.log('test');
       span.classList.replace('header__menu-hamburguer', 'header__menu-hamburguer-open');
       this.containerLabel!.nativeElement.style.background = '#327F8F';
       this.listMenuMobile!.nativeElement.classList.replace('close-menu', 'open-menu');
